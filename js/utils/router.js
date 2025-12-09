@@ -54,9 +54,13 @@ export class Router {
 
     // Navigate to a specific tab/page
     async navigateTo(tabName) {
-        if (this.currentPage === tabName) return;
+        if (this.currentPage === tabName) {
+            console.log('⏭️ Already on tab:', tabName);
+            return;
+        }
 
         const path = this.getPathFromTab(tabName);
+        console.log('🔗 Navigating to path:', path, '(tab:', tabName + ')');
         window.history.pushState({ tab: tabName }, '', path);
 
         await this.showTab(tabName);
@@ -64,8 +68,11 @@ export class Router {
 
     // Show a tab and initialize its page module
     async showTab(tabName) {
+        console.log('👀 Showing tab:', tabName);
+        
         // Hide all tabs
         const tabSections = document.querySelectorAll('.tab-section');
+        console.log('   Hiding', tabSections.length, 'tab sections');
         tabSections.forEach(tab => {
             tab.style.display = 'none';
         });
@@ -76,24 +83,34 @@ export class Router {
 
         const activeBtn = document.querySelector(`.sidebar-nav-btn[data-tab="${tabName}"]`);
         if (activeBtn) {
+            console.log('   Highlighting button for tab:', tabName);
             activeBtn.classList.add('active');
+        } else {
+            console.warn('   ⚠️ No button found for tab:', tabName);
         }
 
         // Show selected tab
         const tabEl = document.getElementById(`tab-${tabName}`);
         if (tabEl) {
+            console.log('   Showing tab element: #tab-' + tabName);
             tabEl.style.display = '';
+        } else {
+            console.warn('   ⚠️ No tab element found: #tab-' + tabName);
         }
 
         // Initialize page module
         if (this.pages[tabName] && this.pages[tabName].init) {
             try {
+                console.log('   🚀 Initializing page module:', tabName);
                 await this.pages[tabName].init();
                 this.currentPage = tabName;
                 this.notifyListeners(tabName);
+                console.log('   ✅ Tab ready:', tabName);
             } catch (error) {
-                console.error(`Error initializing ${tabName} page:`, error);
+                console.error(`❌ Error initializing ${tabName} page:`, error);
             }
+        } else {
+            console.warn('   ⚠️ No init function for tab:', tabName);
         }
     }
 
@@ -108,17 +125,25 @@ export class Router {
 
     // Initialize router and handle browser back/forward
     init() {
+        console.log('🔧 Router initialized');
+        console.log('📍 Current path:', window.location.pathname);
+        
         // Handle browser back/forward buttons
         window.addEventListener('popstate', async (event) => {
             const tabName = event.state?.tab || this.getTabFromPath(window.location.pathname);
+            console.log('⬅️ Popstate - navigating to:', tabName);
             await this.showTab(tabName);
         });
 
         // Handle sidebar navigation
-        document.querySelectorAll('.sidebar-nav-btn').forEach(btn => {
+        const buttons = document.querySelectorAll('.sidebar-nav-btn');
+        console.log('🔘 Found', buttons.length, 'sidebar buttons');
+        
+        buttons.forEach(btn => {
             btn.addEventListener('click', async (e) => {
                 e.preventDefault();
                 const tabName = btn.dataset.tab;
+                console.log('👆 Clicked button for tab:', tabName);
                 if (tabName) {
                     await this.navigateTo(tabName);
                 }
@@ -127,6 +152,7 @@ export class Router {
 
         // Load initial page from URL
         const initialTab = this.getTabFromPath(window.location.pathname);
+        console.log('📄 Loading initial tab:', initialTab);
         this.showTab(initialTab);
     }
 

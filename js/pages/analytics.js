@@ -1,5 +1,7 @@
 import { db, ref, get, onValue } from '../utils/firebase.js';
-import Chart from 'https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.9.1/chart.min.js';
+
+// Chart.js is already loaded globally from CDN
+const Chart = window.Chart;
 
 export const analyticsPage = {
     analyticsCardsConfig: [

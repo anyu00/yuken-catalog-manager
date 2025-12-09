@@ -1,9 +1,9 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>カタログ管理ダッシュボード</title>
+    <title>繧ｫ繧ｿ繝ｭ繧ｰ邂｡逅・ム繝・す繝･繝懊・繝・/title>
     <link href="https://fonts.googleapis.com/css?family=Poppins:400,600&display=swap" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" rel="stylesheet">
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
@@ -235,15 +235,15 @@
     </head>
 <body>
 <div class="sidebar">
-    <div class="sidebar-title">カタログ管理</div>
+    <div class="sidebar-title">繧ｫ繧ｿ繝ｭ繧ｰ邂｡逅・/div>
     <div class="sidebar-nav">
-        <button class="sidebar-nav-btn active" data-tab="manageCatalog"><i class="fa-solid fa-box"></i> カタログ管理</button>
-        <button class="sidebar-nav-btn" data-tab="placeOrder"><i class="fa-solid fa-cart-plus"></i> 注文する</button>
-        <button class="sidebar-nav-btn" data-tab="catalogEntries"><i class="fa-solid fa-list"></i> カタログエントリ</button>
-        <button class="sidebar-nav-btn" data-tab="orderEntries"><i class="fa-solid fa-file-invoice"></i> 注文エントリ</button>
-        <button class="sidebar-nav-btn" data-tab="reports"><i class="fa-solid fa-chart-bar"></i> レポート</button>
-        <button class="sidebar-nav-btn" data-tab="stockCalendar"><i class="fa-solid fa-calendar-days"></i> カレンダー</button>
-        <button class="sidebar-nav-btn" data-tab="analytics"><i class="fa-solid fa-chart-pie"></i> アナリティクス</button>
+        <button class="sidebar-nav-btn active" data-tab="manageCatalog"><i class="fa-solid fa-box"></i> 繧ｫ繧ｿ繝ｭ繧ｰ邂｡逅・/button>
+        <button class="sidebar-nav-btn" data-tab="placeOrder"><i class="fa-solid fa-cart-plus"></i> 豕ｨ譁・☆繧・/button>
+        <button class="sidebar-nav-btn" data-tab="catalogEntries"><i class="fa-solid fa-list"></i> 繧ｫ繧ｿ繝ｭ繧ｰ繧ｨ繝ｳ繝医Μ</button>
+        <button class="sidebar-nav-btn" data-tab="orderEntries"><i class="fa-solid fa-file-invoice"></i> 豕ｨ譁・お繝ｳ繝医Μ</button>
+        <button class="sidebar-nav-btn" data-tab="reports"><i class="fa-solid fa-chart-bar"></i> 繝ｬ繝昴・繝・/button>
+        <button class="sidebar-nav-btn" data-tab="stockCalendar"><i class="fa-solid fa-calendar-days"></i> 繧ｫ繝ｬ繝ｳ繝繝ｼ</button>
+        <button class="sidebar-nav-btn" data-tab="analytics"><i class="fa-solid fa-chart-pie"></i> 繧｢繝翫Μ繝・ぅ繧ｯ繧ｹ</button>
     </div>
     <div class="sidebar-actions">
         <button class="icon-btn" title="Search"><i class="fa-solid fa-magnifying-glass"></i></button>
@@ -256,76 +256,76 @@
     <div class="glass-main-content">
         <div class="glass-cards">
             <div class="glass-card tab-section" id="tab-manageCatalog">
-                <h2>カタログの管理</h2>
+                <h2>繧ｫ繧ｿ繝ｭ繧ｰ縺ｮ邂｡逅・/h2>
                 <form id="catalogEntryForm">
                     <div class="form-row">
                         <div class="form-group">
-                            <label for="CatalogName">カタログ名</label>
+                            <label for="CatalogName">繧ｫ繧ｿ繝ｭ繧ｰ蜷・/label>
                             <select id="CatalogName" class="form-control" required>
-                                <option value="⼯作機械⽤油圧機器">⼯作機械⽤油圧機器</option>
-                                <option value="プラスチック加⼯機械⽤油圧機器">プラスチック加⼯機械⽤油圧機器</option>
-                                <option value="A3HGシリーズ⾼圧可変ピストンポンプ">A3HGシリーズ⾼圧可変ピストンポンプ</option>
-                                <option value="A3HMシリーズ高圧可変ピストンポンプ">A3HMシリーズ高圧可変ピストンポンプ</option>
+                                <option value="箴ｯ菴懈ｩ滓｢ｰ篆､豐ｹ蝨ｧ讖溷勣">箴ｯ菴懈ｩ滓｢ｰ篆､豐ｹ蝨ｧ讖溷勣</option>
+                                <option value="繝励Λ繧ｹ繝√ャ繧ｯ蜉箴ｯ讖滓｢ｰ篆､豐ｹ蝨ｧ讖溷勣">繝励Λ繧ｹ繝√ャ繧ｯ蜉箴ｯ讖滓｢ｰ篆､豐ｹ蝨ｧ讖溷勣</option>
+                                <option value="A3HG繧ｷ繝ｪ繝ｼ繧ｺ篝ｼ蝨ｧ蜿ｯ螟峨ヴ繧ｹ繝医Φ繝昴Φ繝・>A3HG繧ｷ繝ｪ繝ｼ繧ｺ篝ｼ蝨ｧ蜿ｯ螟峨ヴ繧ｹ繝医Φ繝昴Φ繝・/option>
+                                <option value="A3HM繧ｷ繝ｪ繝ｼ繧ｺ鬮伜悸蜿ｯ螟峨ヴ繧ｹ繝医Φ繝昴Φ繝・>A3HM繧ｷ繝ｪ繝ｼ繧ｺ鬮伜悸蜿ｯ螟峨ヴ繧ｹ繝医Φ繝昴Φ繝・/option>
                                 <option value="The ASR series Ultimate hydraulic control system">The ASR series Ultimate hydraulic control system</option>
-                                <option value="ASRシリーズACサーボモータ駆動ポンプ">ASRシリーズACサーボモータ駆動ポンプ</option>
-                                <option value="ロジック弁">ロジック弁</option>
-                                <option value="インライン形プレフィル弁">インライン形プレフィル弁</option>
-                                <option value="センタDINコネクタ形電磁弁">センタDINコネクタ形電磁弁</option>
-                                <option value="リニューアルアンプ搭載Gシリーズ可変ショックレス形電磁切換弁">リニューアルアンプ搭載Gシリーズ可変ショックレス形電磁切換弁</option>
-                                <option value="EHシリーズ⽐例電磁式制御機器">EHシリーズ⽐例電磁式制御機器</option>
-                                <option value="比例電磁式レデューシングモジュラー弁　EMRP-01">比例電磁式レデューシングモジュラー弁　EMRP-01</option>
-                                <option value="アンプ搭載形比例電磁式方向・流量制御弁(主弁フィードバック制御付き) ECDFHG-04EH/06EH">アンプ搭載形比例電磁式方向・流量制御弁(主弁フィードバック制御付き) ECDFHG-04EH/06EH</option>
-                                <option value="比例電磁式方向・流量制御弁　EDFHG-04/06">比例電磁式方向・流量制御弁　EDFHG-04/06</option>
-                                <option value="高速リニアサーボ弁シリーズ(リーフレット)">高速リニアサーボ弁シリーズ(リーフレット)</option>
-                                <option value="ダブルモータ直動形リニアサーボ弁">ダブルモータ直動形リニアサーボ弁</option>
-                                <option value="ポジションセンシング油圧シリンダ">ポジションセンシング油圧シリンダ</option>
-                                <option value="CHW形油圧シリンダ">CHW形油圧シリンダ</option>
-                                <option value="ミニ油圧シリンダ">ミニ油圧シリンダ</option>
-                                <option value="HE-YAパック">HE-YAパック</option>
-                                <option value="標準油圧ユニット">標準油圧ユニット</option>
-                                <option value="省エネコントローラオートチューニング機能付き">省エネコントローラオートチューニング機能付き</option>
-                                <option value="コンタミキット">コンタミキット</option>
-                                <option value="YB-32/50/65/80M ⾃動マルチコンパクタ">YB-32/50/65/80M ⾃動マルチコンパクタ</option>
-                                <option value="ASRシリーズACサーボモータ駆動ポンプ搭載⾃動マルチコンパクタ">ASRシリーズACサーボモータ駆動ポンプ搭載⾃動マルチコンパクタ</option>
-                                <option value="⾃動PETボトル減容機">⾃動PETボトル減容機</option>
-                                <option value="⾃動切屑圧縮機 「キリコ」（カタログ）">⾃動切屑圧縮機 「キリコ」（カタログ）</option>
-                                <option value="⾃動切屑圧縮機 「キリコ」（リーフレット）">⾃動切屑圧縮機 「キリコ」（リーフレット）</option>
-                                <option value="ドラム⽸コンパクタ">ドラム⽸コンパクタ</option>
-                                <option value="⽸コンパクタ">⽸コンパクタ</option>
-                                <option value="⽣ゴミ圧縮分別機YGシリーズ">⽣ゴミ圧縮分別機YGシリーズ</option>
-                                <option value="YB-5Ｍシリーズマルチコンパクタ">YB-5Ｍシリーズマルチコンパクタ</option>
+                                <option value="ASR繧ｷ繝ｪ繝ｼ繧ｺAC繧ｵ繝ｼ繝懊Δ繝ｼ繧ｿ鬧・虚繝昴Φ繝・>ASR繧ｷ繝ｪ繝ｼ繧ｺAC繧ｵ繝ｼ繝懊Δ繝ｼ繧ｿ鬧・虚繝昴Φ繝・/option>
+                                <option value="繝ｭ繧ｸ繝・け蠑・>繝ｭ繧ｸ繝・け蠑・/option>
+                                <option value="繧､繝ｳ繝ｩ繧､繝ｳ蠖｢繝励Ξ繝輔ぅ繝ｫ蠑・>繧､繝ｳ繝ｩ繧､繝ｳ蠖｢繝励Ξ繝輔ぅ繝ｫ蠑・/option>
+                                <option value="繧ｻ繝ｳ繧ｿDIN繧ｳ繝阪け繧ｿ蠖｢髮ｻ逎∝ｼ・>繧ｻ繝ｳ繧ｿDIN繧ｳ繝阪け繧ｿ蠖｢髮ｻ逎∝ｼ・/option>
+                                <option value="繝ｪ繝九Η繝ｼ繧｢繝ｫ繧｢繝ｳ繝玲政霈烏繧ｷ繝ｪ繝ｼ繧ｺ蜿ｯ螟峨す繝ｧ繝・け繝ｬ繧ｹ蠖｢髮ｻ逎∝・謠帛ｼ・>繝ｪ繝九Η繝ｼ繧｢繝ｫ繧｢繝ｳ繝玲政霈烏繧ｷ繝ｪ繝ｼ繧ｺ蜿ｯ螟峨す繝ｧ繝・け繝ｬ繧ｹ蠖｢髮ｻ逎∝・謠帛ｼ・/option>
+                                <option value="EH繧ｷ繝ｪ繝ｼ繧ｺ篆蝉ｾ矩崕逎∝ｼ丞宛蠕｡讖溷勣">EH繧ｷ繝ｪ繝ｼ繧ｺ篆蝉ｾ矩崕逎∝ｼ丞宛蠕｡讖溷勣</option>
+                                <option value="豈比ｾ矩崕逎∝ｼ上Ξ繝・Η繝ｼ繧ｷ繝ｳ繧ｰ繝｢繧ｸ繝･繝ｩ繝ｼ蠑√EMRP-01">豈比ｾ矩崕逎∝ｼ上Ξ繝・Η繝ｼ繧ｷ繝ｳ繧ｰ繝｢繧ｸ繝･繝ｩ繝ｼ蠑√EMRP-01</option>
+                                <option value="繧｢繝ｳ繝玲政霈牙ｽ｢豈比ｾ矩崕逎∝ｼ乗婿蜷代・豬・㍼蛻ｶ蠕｡蠑・荳ｻ蠑√ヵ繧｣繝ｼ繝峨ヰ繝・け蛻ｶ蠕｡莉倥″) ECDFHG-04EH/06EH">繧｢繝ｳ繝玲政霈牙ｽ｢豈比ｾ矩崕逎∝ｼ乗婿蜷代・豬・㍼蛻ｶ蠕｡蠑・荳ｻ蠑√ヵ繧｣繝ｼ繝峨ヰ繝・け蛻ｶ蠕｡莉倥″) ECDFHG-04EH/06EH</option>
+                                <option value="豈比ｾ矩崕逎∝ｼ乗婿蜷代・豬・㍼蛻ｶ蠕｡蠑√EDFHG-04/06">豈比ｾ矩崕逎∝ｼ乗婿蜷代・豬・㍼蛻ｶ蠕｡蠑√EDFHG-04/06</option>
+                                <option value="鬮倬溘Μ繝九い繧ｵ繝ｼ繝懷ｼ√す繝ｪ繝ｼ繧ｺ(繝ｪ繝ｼ繝輔Ξ繝・ヨ)">鬮倬溘Μ繝九い繧ｵ繝ｼ繝懷ｼ√す繝ｪ繝ｼ繧ｺ(繝ｪ繝ｼ繝輔Ξ繝・ヨ)</option>
+                                <option value="繝繝悶Ν繝｢繝ｼ繧ｿ逶ｴ蜍募ｽ｢繝ｪ繝九い繧ｵ繝ｼ繝懷ｼ・>繝繝悶Ν繝｢繝ｼ繧ｿ逶ｴ蜍募ｽ｢繝ｪ繝九い繧ｵ繝ｼ繝懷ｼ・/option>
+                                <option value="繝昴ず繧ｷ繝ｧ繝ｳ繧ｻ繝ｳ繧ｷ繝ｳ繧ｰ豐ｹ蝨ｧ繧ｷ繝ｪ繝ｳ繝">繝昴ず繧ｷ繝ｧ繝ｳ繧ｻ繝ｳ繧ｷ繝ｳ繧ｰ豐ｹ蝨ｧ繧ｷ繝ｪ繝ｳ繝</option>
+                                <option value="CHW蠖｢豐ｹ蝨ｧ繧ｷ繝ｪ繝ｳ繝">CHW蠖｢豐ｹ蝨ｧ繧ｷ繝ｪ繝ｳ繝</option>
+                                <option value="繝溘ル豐ｹ蝨ｧ繧ｷ繝ｪ繝ｳ繝">繝溘ル豐ｹ蝨ｧ繧ｷ繝ｪ繝ｳ繝</option>
+                                <option value="HE-YA繝代ャ繧ｯ">HE-YA繝代ャ繧ｯ</option>
+                                <option value="讓呎ｺ匁ｲｹ蝨ｧ繝ｦ繝九ャ繝・>讓呎ｺ匁ｲｹ蝨ｧ繝ｦ繝九ャ繝・/option>
+                                <option value="逵√お繝阪さ繝ｳ繝医Ο繝ｼ繝ｩ繧ｪ繝ｼ繝医メ繝･繝ｼ繝九Φ繧ｰ讖溯・莉倥″">逵√お繝阪さ繝ｳ繝医Ο繝ｼ繝ｩ繧ｪ繝ｼ繝医メ繝･繝ｼ繝九Φ繧ｰ讖溯・莉倥″</option>
+                                <option value="繧ｳ繝ｳ繧ｿ繝溘く繝・ヨ">繧ｳ繝ｳ繧ｿ繝溘く繝・ヨ</option>
+                                <option value="YB-32/50/65/80M 篝・虚繝槭Ν繝√さ繝ｳ繝代け繧ｿ">YB-32/50/65/80M 篝・虚繝槭Ν繝√さ繝ｳ繝代け繧ｿ</option>
+                                <option value="ASR繧ｷ繝ｪ繝ｼ繧ｺAC繧ｵ繝ｼ繝懊Δ繝ｼ繧ｿ鬧・虚繝昴Φ繝玲政霈俄ｾ・虚繝槭Ν繝√さ繝ｳ繝代け繧ｿ">ASR繧ｷ繝ｪ繝ｼ繧ｺAC繧ｵ繝ｼ繝懊Δ繝ｼ繧ｿ鬧・虚繝昴Φ繝玲政霈俄ｾ・虚繝槭Ν繝√さ繝ｳ繝代け繧ｿ</option>
+                                <option value="篝・虚PET繝懊ヨ繝ｫ貂帛ｮｹ讖・>篝・虚PET繝懊ヨ繝ｫ貂帛ｮｹ讖・/option>
+                                <option value="篝・虚蛻・ｱ大悸邵ｮ讖・縲後く繝ｪ繧ｳ縲搾ｼ医き繧ｿ繝ｭ繧ｰ・・>篝・虚蛻・ｱ大悸邵ｮ讖・縲後く繝ｪ繧ｳ縲搾ｼ医き繧ｿ繝ｭ繧ｰ・・/option>
+                                <option value="篝・虚蛻・ｱ大悸邵ｮ讖・縲後く繝ｪ繧ｳ縲搾ｼ医Μ繝ｼ繝輔Ξ繝・ヨ・・>篝・虚蛻・ｱ大悸邵ｮ讖・縲後く繝ｪ繧ｳ縲搾ｼ医Μ繝ｼ繝輔Ξ繝・ヨ・・/option>
+                                <option value="繝峨Λ繝篆ｸ繧ｳ繝ｳ繝代け繧ｿ">繝峨Λ繝篆ｸ繧ｳ繝ｳ繝代け繧ｿ</option>
+                                <option value="篆ｸ繧ｳ繝ｳ繝代け繧ｿ">篆ｸ繧ｳ繝ｳ繝代け繧ｿ</option>
+                                <option value="篆｣繧ｴ繝溷悸邵ｮ蛻・挨讖欹G繧ｷ繝ｪ繝ｼ繧ｺ">篆｣繧ｴ繝溷悸邵ｮ蛻・挨讖欹G繧ｷ繝ｪ繝ｼ繧ｺ</option>
+                                <option value="YB-5・ｭ繧ｷ繝ｪ繝ｼ繧ｺ繝槭Ν繝√さ繝ｳ繝代け繧ｿ">YB-5・ｭ繧ｷ繝ｪ繝ｼ繧ｺ繝槭Ν繝√さ繝ｳ繝代け繧ｿ</option>
                             </select>
                         </div>
                         <div class="form-group">
-                            <label for="ReceiptDate">受領日</label>
+                            <label for="ReceiptDate">蜿鈴俶律</label>
                             <input id="ReceiptDate" class="form-control" type="date" required>
                         </div>
                         <div class="form-group">
-                            <label for="QuantityReceived">受領数量</label>
+                            <label for="QuantityReceived">蜿鈴俶焚驥・/label>
                             <input id="QuantityReceived" class="form-control" type="number" min="0" required>
                         </div>
                         <div class="form-group">
-                            <label for="DeliveryDate">配送日</label>
+                            <label for="DeliveryDate">驟埼∵律</label>
                             <input id="DeliveryDate" class="form-control" type="date" required>
                         </div>
                         <div class="form-group">
-                            <label for="IssueQuantity">発行数量</label>
+                            <label for="IssueQuantity">逋ｺ陦梧焚驥・/label>
                             <input id="IssueQuantity" class="form-control" type="number" min="0" required>
                         </div>
                         <div class="form-group">
-                            <label for="StockQuantity">在庫数量</label>
+                            <label for="StockQuantity">蝨ｨ蠎ｫ謨ｰ驥・/label>
                             <input id="StockQuantity" class="form-control" type="number" min="0" required>
                         </div>
                         <div class="form-group">
-                            <label for="DistributionDestination">配布先</label>
+                            <label for="DistributionDestination">驟榊ｸ・・</label>
                             <input id="DistributionDestination" class="form-control" type="text" required>
                         </div>
                         <div class="form-group">
-                            <label for="Requester">依頼者</label>
+                            <label for="Requester">萓晞ｼ閠・/label>
                             <input id="Requester" class="form-control" type="text" required>
                         </div>
                         <div class="form-group">
-                            <label for="Remarks">備考</label>
+                            <label for="Remarks">蛯呵・/label>
                             <input id="Remarks" class="form-control" type="text">
                         </div>
                     </div>
@@ -334,79 +334,79 @@
                 <div class="message text-center" id="message"></div>
             </div>
             <div class="glass-card tab-section" id="tab-placeOrder" style="display:none;">
-                <h2>注文する</h2>
+                <h2>豕ｨ譁・☆繧・/h2>
                 <form id="orderForm">
                     <div class="form-row">
                         <div class="form-group">
-                            <label for="OrderCatalogName">カタログ名</label>
+                            <label for="OrderCatalogName">繧ｫ繧ｿ繝ｭ繧ｰ蜷・/label>
                             <select id="OrderCatalogName" class="form-control" required>
-                                <option value="⼯作機械⽤油圧機器">⼯作機械⽤油圧機器</option>
-                                <option value="プラスチック加⼯機械⽤油圧機器">プラスチック加⼯機械⽤油圧機器</option>
-                                <option value="A3HGシリーズ⾼圧可変ピストンポンプ">A3HGシリーズ⾼圧可変ピストンポンプ</option>
-                                <option value="A3HMシリーズ高圧可変ピストンポンプ">A3HMシリーズ高圧可変ピストンポンプ</option>
+                                <option value="箴ｯ菴懈ｩ滓｢ｰ篆､豐ｹ蝨ｧ讖溷勣">箴ｯ菴懈ｩ滓｢ｰ篆､豐ｹ蝨ｧ讖溷勣</option>
+                                <option value="繝励Λ繧ｹ繝√ャ繧ｯ蜉箴ｯ讖滓｢ｰ篆､豐ｹ蝨ｧ讖溷勣">繝励Λ繧ｹ繝√ャ繧ｯ蜉箴ｯ讖滓｢ｰ篆､豐ｹ蝨ｧ讖溷勣</option>
+                                <option value="A3HG繧ｷ繝ｪ繝ｼ繧ｺ篝ｼ蝨ｧ蜿ｯ螟峨ヴ繧ｹ繝医Φ繝昴Φ繝・>A3HG繧ｷ繝ｪ繝ｼ繧ｺ篝ｼ蝨ｧ蜿ｯ螟峨ヴ繧ｹ繝医Φ繝昴Φ繝・/option>
+                                <option value="A3HM繧ｷ繝ｪ繝ｼ繧ｺ鬮伜悸蜿ｯ螟峨ヴ繧ｹ繝医Φ繝昴Φ繝・>A3HM繧ｷ繝ｪ繝ｼ繧ｺ鬮伜悸蜿ｯ螟峨ヴ繧ｹ繝医Φ繝昴Φ繝・/option>
                                 <option value="The ASR series Ultimate hydraulic control system">The ASR series Ultimate hydraulic control system</option>
-                                <option value="ASRシリーズACサーボモータ駆動ポンプ">ASRシリーズACサーボモータ駆動ポンプ</option>
-                                <option value="ロジック弁">ロジック弁</option>
-                                <option value="インライン形プレフィル弁">インライン形プレフィル弁</option>
-                                <option value="センタDINコネクタ形電磁弁">センタDINコネクタ形電磁弁</option>
-                                <option value="リニューアルアンプ搭載Gシリーズ可変ショックレス形電磁切換弁">リニューアルアンプ搭載Gシリーズ可変ショックレス形電磁切換弁</option>
-                                <option value="EHシリーズ⽐例電磁式制御機器">EHシリーズ⽐例電磁式制御機器</option>
-                                <option value="比例電磁式レデューシングモジュラー弁　EMRP-01">比例電磁式レデューシングモジュラー弁　EMRP-01</option>
-                                <option value="アンプ搭載形比例電磁式方向・流量制御弁(主弁フィードバック制御付き) ECDFHG-04EH/06EH">アンプ搭載形比例電磁式方向・流量制御弁(主弁フィードバック制御付き) ECDFHG-04EH/06EH</option>
-                                <option value="比例電磁式方向・流量制御弁　EDFHG-04/06">比例電磁式方向・流量制御弁　EDFHG-04/06</option>
-                                <option value="高速リニアサーボ弁シリーズ(リーフレット)">高速リニアサーボ弁シリーズ(リーフレット)</option>
-                                <option value="ダブルモータ直動形リニアサーボ弁">ダブルモータ直動形リニアサーボ弁</option>
-                                <option value="ポジションセンシング油圧シリンダ">ポジションセンシング油圧シリンダ</option>
-                                <option value="CHW形油圧シリンダ">CHW形油圧シリンダ</option>
-                                <option value="ミニ油圧シリンダ">ミニ油圧シリンダ</option>
-                                <option value="HE-YAパック">HE-YAパック</option>
-                                <option value="標準油圧ユニット">標準油圧ユニット</option>
-                                <option value="省エネコントローラオートチューニング機能付き">省エネコントローラオートチューニング機能付き</option>
-                                <option value="コンタミキット">コンタミキット</option>
-                                <option value="YB-32/50/65/80M ⾃動マルチコンパクタ">YB-32/50/65/80M ⾃動マルチコンパクタ</option>
-                                <option value="ASRシリーズACサーボモータ駆動ポンプ搭載⾃動マルチコンパクタ">ASRシリーズACサーボモータ駆動ポンプ搭載⾃動マルチコンパクタ</option>
-                                <option value="⾃動PETボトル減容機">⾃動PETボトル減容機</option>
-                                <option value="⾃動切屑圧縮機 「キリコ」（カタログ）">⾃動切屑圧縮機 「キリコ」（カタログ）</option>
-                                <option value="⾃動切屑圧縮機 「キリコ」（リーフレット）">⾃動切屑圧縮機 「キリコ」（リーフレット）</option>
-                                <option value="ドラム⽸コンパクタ">ドラム⽸コンパクタ</option>
-                                <option value="⽸コンパクタ">⽸コンパクタ</option>
-                                <option value="⽣ゴミ圧縮分別機YGシリーズ">⽣ゴミ圧縮分別機YGシリーズ</option>
-                                <option value="YB-5Ｍシリーズマルチコンパクタ">YB-5Ｍシリーズマルチコンパクタ</option>
+                                <option value="ASR繧ｷ繝ｪ繝ｼ繧ｺAC繧ｵ繝ｼ繝懊Δ繝ｼ繧ｿ鬧・虚繝昴Φ繝・>ASR繧ｷ繝ｪ繝ｼ繧ｺAC繧ｵ繝ｼ繝懊Δ繝ｼ繧ｿ鬧・虚繝昴Φ繝・/option>
+                                <option value="繝ｭ繧ｸ繝・け蠑・>繝ｭ繧ｸ繝・け蠑・/option>
+                                <option value="繧､繝ｳ繝ｩ繧､繝ｳ蠖｢繝励Ξ繝輔ぅ繝ｫ蠑・>繧､繝ｳ繝ｩ繧､繝ｳ蠖｢繝励Ξ繝輔ぅ繝ｫ蠑・/option>
+                                <option value="繧ｻ繝ｳ繧ｿDIN繧ｳ繝阪け繧ｿ蠖｢髮ｻ逎∝ｼ・>繧ｻ繝ｳ繧ｿDIN繧ｳ繝阪け繧ｿ蠖｢髮ｻ逎∝ｼ・/option>
+                                <option value="繝ｪ繝九Η繝ｼ繧｢繝ｫ繧｢繝ｳ繝玲政霈烏繧ｷ繝ｪ繝ｼ繧ｺ蜿ｯ螟峨す繝ｧ繝・け繝ｬ繧ｹ蠖｢髮ｻ逎∝・謠帛ｼ・>繝ｪ繝九Η繝ｼ繧｢繝ｫ繧｢繝ｳ繝玲政霈烏繧ｷ繝ｪ繝ｼ繧ｺ蜿ｯ螟峨す繝ｧ繝・け繝ｬ繧ｹ蠖｢髮ｻ逎∝・謠帛ｼ・/option>
+                                <option value="EH繧ｷ繝ｪ繝ｼ繧ｺ篆蝉ｾ矩崕逎∝ｼ丞宛蠕｡讖溷勣">EH繧ｷ繝ｪ繝ｼ繧ｺ篆蝉ｾ矩崕逎∝ｼ丞宛蠕｡讖溷勣</option>
+                                <option value="豈比ｾ矩崕逎∝ｼ上Ξ繝・Η繝ｼ繧ｷ繝ｳ繧ｰ繝｢繧ｸ繝･繝ｩ繝ｼ蠑√EMRP-01">豈比ｾ矩崕逎∝ｼ上Ξ繝・Η繝ｼ繧ｷ繝ｳ繧ｰ繝｢繧ｸ繝･繝ｩ繝ｼ蠑√EMRP-01</option>
+                                <option value="繧｢繝ｳ繝玲政霈牙ｽ｢豈比ｾ矩崕逎∝ｼ乗婿蜷代・豬・㍼蛻ｶ蠕｡蠑・荳ｻ蠑√ヵ繧｣繝ｼ繝峨ヰ繝・け蛻ｶ蠕｡莉倥″) ECDFHG-04EH/06EH">繧｢繝ｳ繝玲政霈牙ｽ｢豈比ｾ矩崕逎∝ｼ乗婿蜷代・豬・㍼蛻ｶ蠕｡蠑・荳ｻ蠑√ヵ繧｣繝ｼ繝峨ヰ繝・け蛻ｶ蠕｡莉倥″) ECDFHG-04EH/06EH</option>
+                                <option value="豈比ｾ矩崕逎∝ｼ乗婿蜷代・豬・㍼蛻ｶ蠕｡蠑√EDFHG-04/06">豈比ｾ矩崕逎∝ｼ乗婿蜷代・豬・㍼蛻ｶ蠕｡蠑√EDFHG-04/06</option>
+                                <option value="鬮倬溘Μ繝九い繧ｵ繝ｼ繝懷ｼ√す繝ｪ繝ｼ繧ｺ(繝ｪ繝ｼ繝輔Ξ繝・ヨ)">鬮倬溘Μ繝九い繧ｵ繝ｼ繝懷ｼ√す繝ｪ繝ｼ繧ｺ(繝ｪ繝ｼ繝輔Ξ繝・ヨ)</option>
+                                <option value="繝繝悶Ν繝｢繝ｼ繧ｿ逶ｴ蜍募ｽ｢繝ｪ繝九い繧ｵ繝ｼ繝懷ｼ・>繝繝悶Ν繝｢繝ｼ繧ｿ逶ｴ蜍募ｽ｢繝ｪ繝九い繧ｵ繝ｼ繝懷ｼ・/option>
+                                <option value="繝昴ず繧ｷ繝ｧ繝ｳ繧ｻ繝ｳ繧ｷ繝ｳ繧ｰ豐ｹ蝨ｧ繧ｷ繝ｪ繝ｳ繝">繝昴ず繧ｷ繝ｧ繝ｳ繧ｻ繝ｳ繧ｷ繝ｳ繧ｰ豐ｹ蝨ｧ繧ｷ繝ｪ繝ｳ繝</option>
+                                <option value="CHW蠖｢豐ｹ蝨ｧ繧ｷ繝ｪ繝ｳ繝">CHW蠖｢豐ｹ蝨ｧ繧ｷ繝ｪ繝ｳ繝</option>
+                                <option value="繝溘ル豐ｹ蝨ｧ繧ｷ繝ｪ繝ｳ繝">繝溘ル豐ｹ蝨ｧ繧ｷ繝ｪ繝ｳ繝</option>
+                                <option value="HE-YA繝代ャ繧ｯ">HE-YA繝代ャ繧ｯ</option>
+                                <option value="讓呎ｺ匁ｲｹ蝨ｧ繝ｦ繝九ャ繝・>讓呎ｺ匁ｲｹ蝨ｧ繝ｦ繝九ャ繝・/option>
+                                <option value="逵√お繝阪さ繝ｳ繝医Ο繝ｼ繝ｩ繧ｪ繝ｼ繝医メ繝･繝ｼ繝九Φ繧ｰ讖溯・莉倥″">逵√お繝阪さ繝ｳ繝医Ο繝ｼ繝ｩ繧ｪ繝ｼ繝医メ繝･繝ｼ繝九Φ繧ｰ讖溯・莉倥″</option>
+                                <option value="繧ｳ繝ｳ繧ｿ繝溘く繝・ヨ">繧ｳ繝ｳ繧ｿ繝溘く繝・ヨ</option>
+                                <option value="YB-32/50/65/80M 篝・虚繝槭Ν繝√さ繝ｳ繝代け繧ｿ">YB-32/50/65/80M 篝・虚繝槭Ν繝√さ繝ｳ繝代け繧ｿ</option>
+                                <option value="ASR繧ｷ繝ｪ繝ｼ繧ｺAC繧ｵ繝ｼ繝懊Δ繝ｼ繧ｿ鬧・虚繝昴Φ繝玲政霈俄ｾ・虚繝槭Ν繝√さ繝ｳ繝代け繧ｿ">ASR繧ｷ繝ｪ繝ｼ繧ｺAC繧ｵ繝ｼ繝懊Δ繝ｼ繧ｿ鬧・虚繝昴Φ繝玲政霈俄ｾ・虚繝槭Ν繝√さ繝ｳ繝代け繧ｿ</option>
+                                <option value="篝・虚PET繝懊ヨ繝ｫ貂帛ｮｹ讖・>篝・虚PET繝懊ヨ繝ｫ貂帛ｮｹ讖・/option>
+                                <option value="篝・虚蛻・ｱ大悸邵ｮ讖・縲後く繝ｪ繧ｳ縲搾ｼ医き繧ｿ繝ｭ繧ｰ・・>篝・虚蛻・ｱ大悸邵ｮ讖・縲後く繝ｪ繧ｳ縲搾ｼ医き繧ｿ繝ｭ繧ｰ・・/option>
+                                <option value="篝・虚蛻・ｱ大悸邵ｮ讖・縲後く繝ｪ繧ｳ縲搾ｼ医Μ繝ｼ繝輔Ξ繝・ヨ・・>篝・虚蛻・ｱ大悸邵ｮ讖・縲後く繝ｪ繧ｳ縲搾ｼ医Μ繝ｼ繝輔Ξ繝・ヨ・・/option>
+                                <option value="繝峨Λ繝篆ｸ繧ｳ繝ｳ繝代け繧ｿ">繝峨Λ繝篆ｸ繧ｳ繝ｳ繝代け繧ｿ</option>
+                                <option value="篆ｸ繧ｳ繝ｳ繝代け繧ｿ">篆ｸ繧ｳ繝ｳ繝代け繧ｿ</option>
+                                <option value="篆｣繧ｴ繝溷悸邵ｮ蛻・挨讖欹G繧ｷ繝ｪ繝ｼ繧ｺ">篆｣繧ｴ繝溷悸邵ｮ蛻・挨讖欹G繧ｷ繝ｪ繝ｼ繧ｺ</option>
+                                <option value="YB-5・ｭ繧ｷ繝ｪ繝ｼ繧ｺ繝槭Ν繝√さ繝ｳ繝代け繧ｿ">YB-5・ｭ繧ｷ繝ｪ繝ｼ繧ｺ繝槭Ν繝√さ繝ｳ繝代け繧ｿ</option>
                             </select>
                         </div>
                         <div class="form-group">
-                            <label for="OrderQuantity">注文数量</label>
+                            <label for="OrderQuantity">豕ｨ譁・焚驥・/label>
                             <input id="OrderQuantity" class="form-control" type="number" min="1" required>
                         </div>
                         <div class="form-group">
-                            <label for="OrderRequester">依頼者</label>
+                            <label for="OrderRequester">萓晞ｼ閠・/label>
                             <input id="OrderRequester" class="form-control" type="text" required>
                         </div>
                     </div>
                     <div class="form-group" style="width:100%;margin-top:12px;">
-                        <label for="OrderMessage" style="font-weight:600;">注文メッセージ (リッチテキスト可)</label>
+                        <label for="OrderMessage" style="font-weight:600;">豕ｨ譁・Γ繝・そ繝ｼ繧ｸ (繝ｪ繝・メ繝・く繧ｹ繝亥庄)</label>
                         <div id="orderMessageToolbar" style="margin-bottom:6px;">
-                            <button type="button" class="btn btn-light btn-sm" title="太字 (Bold)" onclick="formatOrderMsg('bold')"><b>B</b></button>
-                            <button type="button" class="btn btn-light btn-sm" title="斜体 (Italic)" onclick="formatOrderMsg('italic')"><i>I</i></button>
-                            <button type="button" class="btn btn-light btn-sm" title="下線 (Underline)" onclick="formatOrderMsg('underline')"><u>U</u></button>
-                            <button type="button" class="btn btn-light btn-sm" title="色 (Color)" onclick="formatOrderMsgColor()"><span style='color:#e74c3c;'>A</span></button>
-                            <button type="button" class="btn btn-light btn-sm" title="フォントサイズ (Font Size)" onclick="formatOrderMsgFontSize()">A<span style='font-size:0.8em;'>↕</span></button>
-                            <button type="button" class="btn btn-light btn-sm" title="インデント (Indent)" onclick="formatOrderMsg('indent')">→</button>
-                            <button type="button" class="btn btn-light btn-sm" title="インデント解除 (Outdent)" onclick="formatOrderMsg('outdent')">←</button>
+                            <button type="button" class="btn btn-light btn-sm" title="螟ｪ蟄・(Bold)" onclick="formatOrderMsg('bold')"><b>B</b></button>
+                            <button type="button" class="btn btn-light btn-sm" title="譁應ｽ・(Italic)" onclick="formatOrderMsg('italic')"><i>I</i></button>
+                            <button type="button" class="btn btn-light btn-sm" title="荳狗ｷ・(Underline)" onclick="formatOrderMsg('underline')"><u>U</u></button>
+                            <button type="button" class="btn btn-light btn-sm" title="濶ｲ (Color)" onclick="formatOrderMsgColor()"><span style='color:#e74c3c;'>A</span></button>
+                            <button type="button" class="btn btn-light btn-sm" title="繝輔か繝ｳ繝医し繧､繧ｺ (Font Size)" onclick="formatOrderMsgFontSize()">A<span style='font-size:0.8em;'>竊・/span></button>
+                            <button type="button" class="btn btn-light btn-sm" title="繧､繝ｳ繝・Φ繝・(Indent)" onclick="formatOrderMsg('indent')">竊・/button>
+                            <button type="button" class="btn btn-light btn-sm" title="繧､繝ｳ繝・Φ繝郁ｧ｣髯､ (Outdent)" onclick="formatOrderMsg('outdent')">竊・/button>
                         </div>
                         <div id="OrderMessage" contenteditable="true" style="min-height:90px;border:1.5px solid #e0eafc;border-radius:10px;padding:10px;background:#fff;font-size:1rem;outline:none;white-space:pre-wrap;overflow:auto;"></div>
-                        <small class="form-text text-muted">太字・色・フォント・インデント等、リッチテキストで記入できます。</small>
+                        <small class="form-text text-muted">螟ｪ蟄励・濶ｲ繝ｻ繝輔か繝ｳ繝医・繧､繝ｳ繝・Φ繝育ｭ峨√Μ繝・メ繝・く繧ｹ繝医〒險伜・縺ｧ縺阪∪縺吶・/small>
                     </div>
-                    <button type="button" class="btn btn-primary btn-lg btn-block" id="OrderBtn">注文する</button>
+                    <button type="button" class="btn btn-primary btn-lg btn-block" id="OrderBtn">豕ｨ譁・☆繧・/button>
                 </form>
                 <div class="message text-center" id="orderMessage"></div>
             </div>
             <div class="glass-card tab-section" id="tab-catalogEntries" style="display:none;">
                 <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 12px;">
-                  <h2 style="margin-bottom: 0;">カタログエントリ</h2>
+                  <h2 style="margin-bottom: 0;">繧ｫ繧ｿ繝ｭ繧ｰ繧ｨ繝ｳ繝医Μ</h2>
                   <div>
-                    <button class="btn btn-danger btn-sm" id="deleteAllCatalogBtn" style="margin-right:8px;">全データ削除</button>
-                    <button class="btn btn-secondary btn-sm" id="generateSampleCatalogBtn">サンプルデータ生成</button>
+                    <button class="btn btn-danger btn-sm" id="deleteAllCatalogBtn" style="margin-right:8px;">蜈ｨ繝・・繧ｿ蜑企勁</button>
+                    <button class="btn btn-secondary btn-sm" id="generateSampleCatalogBtn">繧ｵ繝ｳ繝励Ν繝・・繧ｿ逕滓・</button>
                   </div>
                 </div>
                 <div id="catalogEntriesAccordion"></div>
@@ -414,41 +414,41 @@
             </div>
             <div class="glass-card tab-section" id="tab-orderEntries" style="display:none;">
                 <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 12px;">
-                  <h2 style="margin-bottom: 0;">注文エントリ</h2>
+                  <h2 style="margin-bottom: 0;">豕ｨ譁・お繝ｳ繝医Μ</h2>
                   <div>
-                    <button class="btn btn-danger btn-sm" id="deleteAllOrderBtn" style="margin-right:8px;">全データ削除</button>
-                    <button class="btn btn-secondary btn-sm" id="generateSampleOrderBtn">サンプルデータ生成</button>
+                    <button class="btn btn-danger btn-sm" id="deleteAllOrderBtn" style="margin-right:8px;">蜈ｨ繝・・繧ｿ蜑企勁</button>
+                    <button class="btn btn-secondary btn-sm" id="generateSampleOrderBtn">繧ｵ繝ｳ繝励Ν繝・・繧ｿ逕滓・</button>
                   </div>
                 </div>
                 <div id="orderEntriesAccordion"></div>
             </div>
             <div class="glass-card tab-section" id="tab-reports" style="display:none;">
-                <h2>レポート</h2>
+                <h2>繝ｬ繝昴・繝・/h2>
                 <canvas id="stockChart"></canvas>
             </div>
             <div class="glass-card tab-section" id="tab-stockCalendar" style="display:none;">
-                <h2>カレンダー</h2>
+                <h2>繧ｫ繝ｬ繝ｳ繝繝ｼ</h2>
                 <div id="stockCalendarContent"></div>
             </div>
             <div class="glass-card tab-section" id="tab-analytics" style="display:none;">
                 <!-- Add Date Range Filter UI to Analytics Tab -->
                 <div class="glass-card" style="margin-bottom:18px;" id="analyticsDateRangeCard">
                   <form id="analyticsDateRangeForm" style="display:flex;align-items:center;gap:16px;">
-                    <label style="margin-bottom:0;font-weight:500;">期間:</label>
+                    <label style="margin-bottom:0;font-weight:500;">譛滄俣:</label>
                     <select id="analyticsDatePreset" class="form-control" style="width:auto;">
-                      <option value="7">直近7日間</option>
-                      <option value="30" selected>直近30日間</option>
-                      <option value="90">直近90日間</option>
-                      <option value="custom">カスタム</option>
+                      <option value="7">逶ｴ霑・譌･髢・/option>
+                      <option value="30" selected>逶ｴ霑・0譌･髢・/option>
+                      <option value="90">逶ｴ霑・0譌･髢・/option>
+                      <option value="custom">繧ｫ繧ｹ繧ｿ繝</option>
                     </select>
                     <input type="date" id="analyticsDateStart" class="form-control" style="width:auto;display:none;">
-                    <span id="analyticsDateDash" style="display:none;">～</span>
+                    <span id="analyticsDateDash" style="display:none;">・・/span>
                     <input type="date" id="analyticsDateEnd" class="form-control" style="width:auto;display:none;">
                   </form>
                 </div>
                 <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 18px;">
-                  <h2 style="margin-bottom: 0;">アナリティクス</h2>
-                  <button class="btn btn-primary" id="customizeAnalyticsBtn"><i class="fa-solid fa-sliders"></i> カスタマイズ</button>
+                  <h2 style="margin-bottom: 0;">繧｢繝翫Μ繝・ぅ繧ｯ繧ｹ</h2>
+                  <button class="btn btn-primary" id="customizeAnalyticsBtn"><i class="fa-solid fa-sliders"></i> 繧ｫ繧ｹ繧ｿ繝槭う繧ｺ</button>
                 </div>
                 <div id="analyticsCards" class="glass-cards"></div>
             </div>
@@ -460,7 +460,7 @@
   <div class="modal-dialog" role="document">
     <div class="modal-content" style="border-radius: 18px;">
       <div class="modal-header">
-        <h5 class="modal-title" id="analyticsCustomizeModalLabel">アナリティクスカードのカスタマイズ</h5>
+        <h5 class="modal-title" id="analyticsCustomizeModalLabel">繧｢繝翫Μ繝・ぅ繧ｯ繧ｹ繧ｫ繝ｼ繝峨・繧ｫ繧ｹ繧ｿ繝槭う繧ｺ</h5>
         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
           <span aria-hidden="true">&times;</span>
         </button>
@@ -469,73 +469,73 @@
         <form id="analyticsCustomizeForm">
           <div class="form-check">
             <input class="form-check-input" type="checkbox" value="totalStock" id="chkTotalStock">
-            <label class="form-check-label" for="chkTotalStock">総在庫数</label>
+            <label class="form-check-label" for="chkTotalStock">邱丞惠蠎ｫ謨ｰ</label>
           </div>
           <div class="form-check">
             <input class="form-check-input" type="checkbox" value="stockByItem" id="chkStockByItem">
-            <label class="form-check-label" for="chkStockByItem">カタログ別在庫</label>
+            <label class="form-check-label" for="chkStockByItem">繧ｫ繧ｿ繝ｭ繧ｰ蛻･蝨ｨ蠎ｫ</label>
           </div>
           <div class="form-check">
             <input class="form-check-input" type="checkbox" value="avgStock" id="chkAvgStock">
-            <label class="form-check-label" for="chkAvgStock">平均在庫レベル</label>
+            <label class="form-check-label" for="chkAvgStock">蟷ｳ蝮・惠蠎ｫ繝ｬ繝吶Ν</label>
           </div>
           <div class="form-check">
             <input class="form-check-input" type="checkbox" value="stockTrend" id="chkStockTrend">
-            <label class="form-check-label" for="chkStockTrend">在庫トレンド</label>
+            <label class="form-check-label" for="chkStockTrend">蝨ｨ蠎ｫ繝医Ξ繝ｳ繝・/label>
           </div>
           <div class="form-check">
             <input class="form-check-input" type="checkbox" value="stockMovement" id="chkStockMovement">
-            <label class="form-check-label" for="chkStockMovement">受領 vs 発行</label>
+            <label class="form-check-label" for="chkStockMovement">蜿鈴・vs 逋ｺ陦・/label>
           </div>
           <div class="form-check">
             <input class="form-check-input" type="checkbox" value="lowStock" id="chkLowStock">
-            <label class="form-check-label" for="chkLowStock">要再発注アイテム</label>
+            <label class="form-check-label" for="chkLowStock">隕∝・逋ｺ豕ｨ繧｢繧､繝・Β</label>
           </div>
           <div class="form-check">
             <input class="form-check-input" type="checkbox" value="stockoutRate" id="chkStockoutRate">
-            <label class="form-check-label" for="chkStockoutRate">在庫切れ率</label>
+            <label class="form-check-label" for="chkStockoutRate">蝨ｨ蠎ｫ蛻・ｌ邇・/label>
           </div>
           <div class="form-check">
             <input class="form-check-input" type="checkbox" value="totalOrders" id="chkTotalOrders">
-            <label class="form-check-label" for="chkTotalOrders">総注文数</label>
+            <label class="form-check-label" for="chkTotalOrders">邱乗ｳｨ譁・焚</label>
           </div>
           <div class="form-check">
             <input class="form-check-input" type="checkbox" value="totalQtyOrdered" id="chkTotalQtyOrdered">
-            <label class="form-check-label" for="chkTotalQtyOrdered">総注文数量</label>
+            <label class="form-check-label" for="chkTotalQtyOrdered">邱乗ｳｨ譁・焚驥・/label>
           </div>
           <div class="form-check">
             <input class="form-check-input" type="checkbox" value="ordersByItem" id="chkOrdersByItem">
-            <label class="form-check-label" for="chkOrdersByItem">カタログ別注文</label>
+            <label class="form-check-label" for="chkOrdersByItem">繧ｫ繧ｿ繝ｭ繧ｰ蛻･豕ｨ譁・/label>
           </div>
           <div class="form-check">
             <input class="form-check-input" type="checkbox" value="orderTrend" id="chkOrderTrend">
-            <label class="form-check-label" for="chkOrderTrend">注文トレンド</label>
+            <label class="form-check-label" for="chkOrderTrend">豕ｨ譁・ヨ繝ｬ繝ｳ繝・/label>
           </div>
           <div class="form-check">
             <input class="form-check-input" type="checkbox" value="ordersByRequester" id="chkOrdersByRequester">
-            <label class="form-check-label" for="chkOrdersByRequester">依頼者別注文</label>
+            <label class="form-check-label" for="chkOrdersByRequester">萓晞ｼ閠・挨豕ｨ譁・/label>
           </div>
           <div class="form-check">
             <input class="form-check-input" type="checkbox" value="avgOrderQty" id="chkAvgOrderQty">
-            <label class="form-check-label" for="chkAvgOrderQty">平均注文数量</label>
+            <label class="form-check-label" for="chkAvgOrderQty">蟷ｳ蝮・ｳｨ譁・焚驥・/label>
           </div>
           <div class="form-check">
             <input class="form-check-input" type="checkbox" value="topIssued" id="chkTopIssued">
-            <label class="form-check-label" for="chkTopIssued">発行数トップ</label>
+            <label class="form-check-label" for="chkTopIssued">逋ｺ陦梧焚繝医ャ繝・/label>
           </div>
           <div class="form-check">
             <input class="form-check-input" type="checkbox" value="topOrdered" id="chkTopOrdered">
-            <label class="form-check-label" for="chkTopOrdered">注文数トップ</label>
+            <label class="form-check-label" for="chkTopOrdered">豕ｨ譁・焚繝医ャ繝・/label>
           </div>
           <div class="form-check">
             <input class="form-check-input" type="checkbox" value="leastPopular" id="chkLeastPopular">
-            <label class="form-check-label" for="chkLeastPopular">不人気カタログ</label>
+            <label class="form-check-label" for="chkLeastPopular">荳堺ｺｺ豌励き繧ｿ繝ｭ繧ｰ</label>
           </div>
         </form>
       </div>
       <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-dismiss="modal">閉じる</button>
-        <button type="button" class="btn btn-primary" id="saveAnalyticsCustomize">保存</button>
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">髢峨§繧・/button>
+        <button type="button" class="btn btn-primary" id="saveAnalyticsCustomize">菫晏ｭ・/button>
       </div>
     </div>
   </div>
@@ -546,1159 +546,3 @@
 <script type="module" src="js/main.js"></script>
 </body>
 </html>
-
-    const firebaseConfig = {
-        apiKey: "AIzaSyADYPqT2qs_EVWah2KjplnojX5Ypyuu0QE",
-        authDomain: "catalog-app-new-a7274.firebaseapp.com",
-        databaseURL: "https://catalog-app-new-a7274-default-rtdb.firebaseio.com",
-        projectId: "catalog-app-new-a7274",
-        storageBucket: "catalog-app-new-a7274.firebasestorage.app",
-        messagingSenderId: "34747584227",
-        appId: "1:34747584227:web:af270008cf3fedc318ffd6",
-        measurementId: "G-M3KBC1NEZM"
-    };
-
-    const app = initializeApp(firebaseConfig);
-    const db = getDatabase();
-
-    const catalogForm = document.getElementById('catalogEntryForm');
-    const orderForm = document.getElementById('orderForm');
-    const catalogTableBody = document.querySelector('#tab-catalogEntries tbody');
-    const stockChartCtx = document.getElementById('stockChart').getContext('2d');
-    let stockChart;
-    let calendar;
-
-
-    // --- カタログ名選択時に前回データ取得＆自動計算 ---
-    document.getElementById('CatalogName').addEventListener('change', async function() {
-        const catName = this.value;
-        const dbRef = ref(db, 'Catalogs/');
-        let lastEntry = null;
-        await get(dbRef).then(snapshot => {
-            if (snapshot.exists()) {
-                const data = snapshot.val();
-                // Find all entries for this catalog
-                const entries = Object.values(data).filter(e => e.CatalogName === catName);
-                if (entries.length > 0) {
-                    // Get the latest by ReceiptDate or DeliveryDate
-                    entries.sort((a, b) => new Date((a.ReceiptDate||a.DeliveryDate||'1970-01-01')) - new Date((b.ReceiptDate||b.DeliveryDate||'1970-01-01')));
-                    lastEntry = entries[entries.length-1];
-                }
-            }
-        });
-        const qtyReceivedInput = document.getElementById('QuantityReceived');
-        const issueQtyInput = document.getElementById('IssueQuantity');
-        const stockQtyInput = document.getElementById('StockQuantity');
-        if (lastEntry) {
-            // If not first entry, default 受領数量 to 0, 発行数量 to 0, 在庫数量 to last stock
-            qtyReceivedInput.value = '';
-            issueQtyInput.value = '';
-            stockQtyInput.value = lastEntry.StockQuantity || 0;
-            stockQtyInput.readOnly = true;
-        } else {
-            // First entry: allow manual input
-            qtyReceivedInput.value = '';
-            issueQtyInput.value = '';
-            stockQtyInput.value = '';
-            stockQtyInput.readOnly = false;
-        }
-    });
-
-    // --- 入力値変更時に在庫数量自動計算 ---
-    function recalcStockQty() {
-        const catName = document.getElementById('CatalogName').value;
-        const qtyReceived = Number(document.getElementById('QuantityReceived').value) || 0;
-        const issueQty = Number(document.getElementById('IssueQuantity').value) || 0;
-        const stockQtyInput = document.getElementById('StockQuantity');
-        const dbRef = ref(db, 'Catalogs/');
-        get(dbRef).then(snapshot => {
-            let lastStock = 0;
-            if (snapshot.exists()) {
-                const data = snapshot.val();
-                const entries = Object.values(data).filter(e => e.CatalogName === catName);
-                if (entries.length > 0) {
-                    entries.sort((a, b) => new Date((a.ReceiptDate||a.DeliveryDate||'1970-01-01')) - new Date((b.ReceiptDate||b.DeliveryDate||'1970-01-01')));
-                    lastStock = Number(entries[entries.length-1].StockQuantity) || 0;
-                }
-            }
-            // If first entry, allow manual input
-            if (entries && entries.length === 0) {
-                stockQtyInput.readOnly = false;
-                return;
-            }
-            // Otherwise, auto-calc
-            stockQtyInput.value = lastStock + qtyReceived - issueQty;
-            stockQtyInput.readOnly = true;
-        });
-    }
-    document.getElementById('QuantityReceived').addEventListener('input', recalcStockQty);
-    document.getElementById('IssueQuantity').addEventListener('input', recalcStockQty);
-
-    document.getElementById('Insbtn').addEventListener('click', async function() {
-        const catName = document.getElementById('CatalogName').value;
-        const dbRef = ref(db, 'Catalogs/');
-        let lastEntry = null;
-        let lastStock = 0;
-        let lastQtyReceived = 0;
-        await get(dbRef).then(snapshot => {
-            if (snapshot.exists()) {
-                const data = snapshot.val();
-                const entries = Object.values(data).filter(e => e.CatalogName === catName);
-                if (entries.length > 0) {
-                    entries.sort((a, b) => new Date((a.ReceiptDate||a.DeliveryDate||'1970-01-01')) - new Date((b.ReceiptDate||b.DeliveryDate||'1970-01-01')));
-                    lastEntry = entries[entries.length-1];
-                    lastStock = Number(lastEntry.StockQuantity) || 0;
-                    lastQtyReceived = Number(lastEntry.QuantityReceived) || 0;
-                }
-            }
-        });
-        let qtyReceived = document.getElementById('QuantityReceived').value;
-        let issueQty = document.getElementById('IssueQuantity').value;
-        // If not first entry and qtyReceived is blank, use last value
-        if (lastEntry && (qtyReceived === '' || qtyReceived === null)) {
-            qtyReceived = lastQtyReceived;
-        }
-        // If not first entry and issueQty is blank, default to 0
-        if (lastEntry && (issueQty === '' || issueQty === null)) {
-            issueQty = 0;
-        }
-        // Calculate stock
-        let stockQty;
-        if (lastEntry) {
-            stockQty = lastStock + Number(qtyReceived) - Number(issueQty);
-        } else {
-            stockQty = Number(qtyReceived) - Number(issueQty);
-        }
-        const data = {
-            CatalogName: catName,
-            ReceiptDate: document.getElementById('ReceiptDate').value,
-            QuantityReceived: qtyReceived,
-            DeliveryDate: document.getElementById('DeliveryDate').value,
-            IssueQuantity: issueQty,
-            StockQuantity: stockQty,
-            DistributionDestination: document.getElementById('DistributionDestination').value,
-            Requester: document.getElementById('Requester').value,
-            Remarks: document.getElementById('Remarks').value,
-        };
-        if (!data.CatalogName || !data.ReceiptDate || !data.DeliveryDate || !data.DistributionDestination || !data.Requester) {
-            alert("Please fill in all required fields.");
-            return;
-        }
-        // Save with unique key (timestamp)
-        set(ref(db, "Catalogs/" + catName + "_" + Date.now()), data)
-            .then(() => {
-                alert("Catalog entry inserted successfully");
-                document.getElementById('catalogEntryForm').reset();
-                renderCatalogTable();
-            })
-            .catch((error) => {
-                alert("Failed to insert data: " + error);
-            });
-    });
-
-    document.getElementById('OrderBtn').addEventListener('click', function() {
-        const orderData = {
-            CatalogName: document.getElementById('OrderCatalogName').value,
-            OrderQuantity: document.getElementById('OrderQuantity').value,
-            Requester: document.getElementById('OrderRequester').value,
-            Message: document.getElementById('OrderMessage').innerHTML // Save as HTML
-        };
-        if (!orderData.CatalogName || !orderData.OrderQuantity || !orderData.Requester) {
-            alert("Please fill in all required fields.");
-            return;
-        }
-        set(ref(db, "Orders/" + orderData.CatalogName + "_" + Date.now()), orderData)
-            .then(() => {
-                alert("Order placed successfully!");
-                document.getElementById('orderForm').reset();
-                document.getElementById('OrderMessage').innerHTML = '';
-            })
-            .catch((error) => {
-                alert("Failed to place order: " + error);
-            });
-    });
-
-    function renderCatalogTable() {
-        catalogTableBody.innerHTML = '';
-        const dbRef = ref(db, "Catalogs/");
-        onValue(dbRef, (snapshot) => {
-            if (snapshot.exists()) {
-                const data = snapshot.val();
-                for (const key in data) {
-                    const row = document.createElement('tr');
-                    row.innerHTML = `
-                        <td>${data[key].CatalogName}</td>
-                        <td>${data[key].ReceiptDate}</td>
-                        <td>${data[key].QuantityReceived}</td>
-                        <td>${data[key].DeliveryDate}</td>
-                        <td>${data[key].IssueQuantity}</td>
-                        <td>${data[key].StockQuantity}</td>
-                        <td>${data[key].DistributionDestination}</td>
-                        <td>${data[key].Requester}</td>
-                        <td>${data[key].Remarks}</td>
-                        <td>
-                            <button class="btn btn-warning btn-sm" onclick="editEntry('${key}')">Edit</button>
-                            <button class="btn btn-danger btn-sm" onclick="deleteEntry('${key}')">Delete</button>
-                        </td>
-                    `;
-                    catalogTableBody.appendChild(row);
-                }
-                updateCharts(data);
-            } else {
-                catalogTableBody.innerHTML = '<tr><td colspan="10" class="text-center">No Data Found</td></tr>';
-            }
-        });
-    }
-
-    function updateCharts(data) {
-        const catalogNames = [];
-        const stockQuantities = [];
-        const quantitiesReceived = [];
-        for (const key in data) {
-            catalogNames.push(data[key].CatalogName);
-            stockQuantities.push(data[key].StockQuantity);
-            quantitiesReceived.push(data[key].QuantityReceived);
-        }
-        if (stockChart) {
-            stockChart.destroy();
-        }
-        stockChart = new Chart(stockChartCtx, {
-            type: 'bar',
-            data: {
-                labels: catalogNames,
-                datasets: [
-                    {
-                        label: '備考',
-                        data: stockQuantities,
-                        backgroundColor: 'rgba(75, 192, 192, 0.5)',
-                    },
-                    {
-                        label: '受領数量',
-                        data: quantitiesReceived,
-                        backgroundColor: 'rgba(153, 102, 255, 0.5)',
-                    }
-                ]
-            },
-            options: {
-                scales: {
-                    y: {
-                        beginAtZero: true
-                    }
-                }
-            }
-        });
-    }
-
-    window.editEntry = function(key) {
-        const dbRef = ref(db, "Catalogs/" + key);
-        get(dbRef).then((snapshot) => {
-            if (snapshot.exists()) {
-                const data = snapshot.val();
-                catalogForm.CatalogName.value = data.CatalogName;
-                catalogForm.ReceiptDate.value = data.ReceiptDate;
-                catalogForm.QuantityReceived.value = data.QuantityReceived;
-                catalogForm.DeliveryDate.value = data.DeliveryDate;
-                catalogForm.IssueQuantity.value = data.IssueQuantity;
-                catalogForm.StockQuantity.value = data.StockQuantity;
-                catalogForm.DistributionDestination.value = data.DistributionDestination;
-                catalogForm.Requester.value = data.Requester;
-                catalogForm.Remarks.value = data.Remarks;
-                catalogForm.dataset.key = key;
-            } else {
-                alert("No Data Found to Edit");
-            }
-        });
-    };
-
-    window.deleteEntry = function(key) {
-        if (confirm("Are you sure you want to delete this entry?")) {
-            remove(ref(db, "Catalogs/" + key))
-                .then(() => {
-                    alert("Data deleted successfully");
-                    renderCatalogTable();
-                })
-                .catch((error) => {
-                    alert("Failed to delete data: " + error);
-                });
-        }
-    };
-
-    function initializeCalendar() {
-        const calendarEl = document.getElementById('stockCalendarContent');
-        calendar = new FullCalendar.Calendar(calendarEl, {
-            initialView: 'dayGridMonth',
-            headerToolbar: {
-                left: 'prev,next today',
-                center: 'title',
-                right: 'dayGridMonth,timeGridWeek,timeGridDay'
-            },
-            eventContent: function(arg) {
-                // Show a colored dot and a badge with the number, truncate name
-                const entry = arg.event.extendedProps;
-                const shortName = arg.event.title.length > 8 ? arg.event.title.slice(0,8) + '…' : arg.event.title;
-                const badge = document.createElement('span');
-                badge.style.background = '#232946';
-                badge.style.color = '#fff';
-                badge.style.borderRadius = '8px';
-                badge.style.fontSize = '0.85em';
-                badge.style.padding = '2px 6px';
-                badge.style.marginLeft = '4px';
-                badge.innerText = entry.stockQuantity || entry.orderQuantity || '';
-                const dot = document.createElement('span');
-                dot.style.display = 'inline-block';
-                dot.style.width = '10px';
-                dot.style.height = '10px';
-                dot.style.background = '#4bc0c0';
-                dot.style.borderRadius = '50%';
-                dot.style.marginRight = '4px';
-                return { domNodes: [dot, document.createTextNode(shortName), badge] };
-            },
-            eventClick: function(info) {
-                // Show modal with all events for that day
-                const dateStr = info.event.startStr;
-                const events = calendar.getEvents().filter(e => e.startStr === dateStr);
-                let html = `<h5 style='margin-bottom:12px;'>${dateStr} のカタログ</h5><ul style='padding-left:1.2em;'>`;
-                events.forEach(e => {
-                    html += `<li><b>${e.title}</b>：在庫 ${e.extendedProps.stockQuantity || '-'} / 発行 ${e.extendedProps.issueQuantity || '-'} / 配布先 ${e.extendedProps.distributionDestination || '-'} / 依頼者 ${e.extendedProps.requester || '-'} / 備考 ${e.extendedProps.remarks || '-'}</li>`;
-                });
-                html += '</ul>';
-                const modal = document.createElement('div');
-                modal.style.position = 'fixed';
-                modal.style.left = '0';
-                modal.style.top = '0';
-                modal.style.width = '100vw';
-                modal.style.height = '100vh';
-                modal.style.background = 'rgba(0,0,0,0.25)';
-                modal.style.zIndex = '99999';
-                modal.innerHTML = `<div style='background:#fff;padding:24px 32px;border-radius:18px;max-width:480px;margin:80px auto;box-shadow:0 8px 32px rgba(0,0,0,0.12);'>${html}<div style='text-align:right;'><button class='btn btn-secondary' id='closeCalModal'>閉じる</button></div></div>`;
-                document.body.appendChild(modal);
-                document.getElementById('closeCalModal').onclick = () => modal.remove();
-            },
-            events: function(fetchInfo, successCallback, failureCallback) {
-                const events = [];
-                const catalogRef = ref(db, 'Catalogs/');
-                onValue(catalogRef, (snapshot) => {
-                    if (snapshot.exists()) {
-                        const catalogData = snapshot.val();
-                        for (const key in catalogData) {
-                            const entry = catalogData[key];
-                            events.push({
-                                title: entry.CatalogName,
-                                start: entry.DeliveryDate,
-                                color: '#e0eafc',
-                                extendedProps: {
-                                    stockQuantity: entry.StockQuantity,
-                                    issueQuantity: entry.IssueQuantity,
-                                    distributionDestination: entry.DistributionDestination,
-                                    requester: entry.Requester,
-                                    remarks: entry.Remarks
-                                }
-                            });
-                        }
-                    }
-                    successCallback(events);
-                }, failureCallback);
-            }
-        });
-        calendar.render();
-    }
-
-    function renderCatalogTablesAccordion() {
-        const container = document.getElementById('catalogEntriesAccordion');
-        container.innerHTML = '';
-        const dbRef = ref(db, 'Catalogs/');
-        onValue(dbRef, (snapshot) => {
-            if (snapshot.exists()) {
-                const data = snapshot.val();
-                const catalogs = {};
-                for (const key in data) {
-                    const catName = data[key].CatalogName;
-                    if (!catalogs[catName]) catalogs[catName] = [];
-                    catalogs[catName].push({ ...data[key], _key: key });
-                }
-                Object.keys(catalogs).forEach((catName, idx) => {
-                    // Sort entries by date (ReceiptDate ascending, fallback to DeliveryDate)
-                    const sortedEntries = catalogs[catName].slice().sort((a, b) => {
-                        const da = new Date(a.ReceiptDate || a.DeliveryDate || '1970-01-01');
-                        const db = new Date(b.ReceiptDate || b.DeliveryDate || '1970-01-01');
-                        return da - db;
-                    });
-                    // Excel-like cumulative stock calculation
-                    let prevStock = null;
-                    let totalReceived = 0, totalIssued = 0;
-                    const rowsHtml = sortedEntries.map((entry, i) => {
-                        const qtyReceived = Number(entry.QuantityReceived || 0);
-                        const qtyIssued = Number(entry.IssueQuantity || 0);
-                        // If this is the first row, use 入庫数量 as stock, else calculate from previous
-                        let stock;
-                        if (i === 0) {
-                            stock = qtyReceived - qtyIssued;
-                        } else {
-                            stock = prevStock + qtyReceived - qtyIssued;
-                        }
-                        prevStock = stock;
-                        totalReceived += qtyReceived;
-                        totalIssued += qtyIssued;
-                        return `
-                            <tr data-key="${entry._key}">
-                                <td class="editable" data-field="CatalogName">${entry.CatalogName}</td>
-                                <td class="editable" data-field="ReceiptDate">${entry.ReceiptDate}</td>
-                                <td class="editable" data-field="QuantityReceived">${entry.QuantityReceived}</td>
-                                <td class="editable" data-field="DeliveryDate">${entry.DeliveryDate}</td>
-                                <td class="editable" data-field="IssueQuantity">${entry.IssueQuantity}</td>
-                                <td><span class="calculated-stock">${stock}</span></td>
-                                <td class="editable" data-field="DistributionDestination">${entry.DistributionDestination}</td>
-                                <td class="editable" data-field="Requester">${entry.Requester}</td>
-                                <td class="editable" data-field="Remarks">${entry.Remarks}</td>
-                                <td>
-                                    <button class="btn btn-danger btn-sm delete-row">Delete</button>
-                                </td>
-                            </tr>
-                        `;
-                    }).join('');
-                    const stock = prevStock !== null ? prevStock : 0;
-                    const section = document.createElement('div');
-                    section.className = 'catalog-accordion-section';
-                    section.innerHTML = `
-                        <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#catTable${idx}" aria-expanded="false" aria-controls="catTable${idx}" style="font-size:1.1rem;font-weight:600;color:#232946;margin-bottom:8px;">
-                            <i class='fa-solid fa-box'></i> ${catName}
-                        </button>
-                        <div class="collapse" id="catTable${idx}">
-                            <div style="overflow-x:auto;">
-                                <table class="glass-table excel-table" data-catalog="${catName}">
-                                    <thead>
-                                        <tr>
-                                            <th>カタログ名</th>
-                                            <th>受領日</th>
-                                            <th>受領数量</th>
-                                            <th>納品日</th>
-                                            <th>発行数量</th>
-                                            <th>在庫数量</th>
-                                            <th>配布先</th>
-                                            <th>依頼者</th>
-                                            <th>備考</th>
-                                            <th>操作</th>
-                                        </tr>
-                                    </thead>
-                                    <tbody>
-                                        ${rowsHtml}
-                                        <tr style="background:#f7faff;font-weight:600;">
-                                            <td colspan="2" style="text-align:right;">合計:</td>
-                                            <td>${totalReceived}</td>
-                                            <td></td>
-                                            <td>${totalIssued}</td>
-                                            <td>${stock}</td>
-                                            <td colspan="4"></td>
-                                        </tr>
-                                    </tbody>
-                                </table>
-                            </div>
-                        </div>
-                    `;
-                    container.appendChild(section);
-                });
-            } else {
-                container.innerHTML = '<div class="text-center">No Data Found</div>';
-            }
-        });
-    }
-
-    // Inline editing logic
-    $(document).on('click', '.excel-table .editable', function() {
-        if ($(this).find('input').length) return;
-        const td = $(this);
-        const oldValue = td.text();
-        const field = td.data('field');
-        // Allow editing StockQuantity as well
-        const tr = td.closest('tr');
-        const key = tr.data('key');
-        const input = $('<input type="text" class="form-control form-control-sm" style="min-width:80px;max-width:160px;">').val(oldValue);
-        td.empty().append(input);
-        input.focus();
-        input.on('keydown', function(e) {
-            if (e.key === 'Enter') {
-                saveEdit();
-            } else if (e.key === 'Escape') {
-                td.text(oldValue);
-            }
-        });
-        input.on('blur', saveEdit);
-        function saveEdit() {
-            const newValue = input.val();
-            if (newValue !== oldValue) {
-                const updateObj = {};
-                updateObj[field] = newValue;
-                update(ref(db, 'Catalogs/' + key), updateObj).then(() => {
-                    td.text(newValue).addClass('cell-updated');
-                    setTimeout(() => td.removeClass('cell-updated'), 800);
-                });
-            } else {
-                td.text(oldValue);
-            }
-        }
-    });
-
-    // Delete row logic
-    $(document).on('click', '.excel-table .delete-row', function() {
-        const tr = $(this).closest('tr');
-        const key = tr.data('key');
-        if (confirm('Are you sure you want to delete this entry?')) {
-            remove(ref(db, 'Catalogs/' + key));
-        }
-    });
-
-    // Sticky header CSS
-    const style = document.createElement('style');
-    style.innerHTML = `.excel-table th { position: sticky; top: 0; background: #e0eafc; z-index: 2; } .cell-updated { background: #d1ffd6 !important; transition: background 0.8s; }`;
-    document.head.appendChild(style);
-
-    function renderOrderTablesAccordion() {
-        const container = document.getElementById('orderEntriesAccordion');
-        container.innerHTML = '';
-        const orderRef = ref(db, 'Orders/');
-        onValue(orderRef, (snapshot) => {
-            if (snapshot.exists()) {
-                const data = snapshot.val();
-                const catalogs = {};
-                for (const key in data) {
-                    const catName = data[key].CatalogName;
-                    if (!catalogs[catName]) catalogs[catName] = [];
-                    catalogs[catName].push({ ...data[key], _key: key });
-                }
-                Object.keys(catalogs).forEach((catName, idx) => {
-                    const section = document.createElement('div');
-                    section.className = 'order-accordion-section';
-                    section.innerHTML = `
-                        <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#orderTable${idx}" aria-expanded="false" aria-controls="orderTable${idx}" style="font-size:1.1rem;font-weight:600;color:#232946;margin-bottom:8px;">
-                            <i class='fa-solid fa-box'></i> ${catName}
-                        </button>
-                        <div class="collapse" id="orderTable${idx}">
-                            <div style="overflow-x:auto;">
-                                <table class="glass-table excel-order-table" data-catalog="${catName}">
-                                    <thead>
-                                        <tr>
-                                            <th>カタログ名</th>
-                                            <th>注文数量</th>
-                                            <th>依頼者</th>
-                                            <th>メッセージ</th>
-                                            <th>操作</th>
-                                        </tr>
-                                    </thead>
-                                    <tbody>
-                                        ${catalogs[catName].map(entry => `
-                                            <tr data-key="${entry._key}">
-                                                <td class="editable-order" data-field="CatalogName">${entry.CatalogName}</td>
-                                                <td class="editable-order" data-field="OrderQuantity">${entry.OrderQuantity}</td>
-                                                <td class="editable-order" data-field="Requester">${entry.Requester}</td>
-                                                <td>${entry.Message ? `<div style='max-width:320px;overflow-x:auto;'>${entry.Message}</div>` : ''}</td>
-                                                <td>
-                                                    <button class="btn btn-danger btn-sm delete-order-row">Delete</button>
-                                                </td>
-                                            </tr>
-                                        `).join('')}
-                                    </tbody>
-                                </table>
-                            </div>
-                        </div>
-                    `;
-                    container.appendChild(section);
-                });
-            } else {
-                container.innerHTML = '<div class="text-center">No Orders Found</div>';
-            }
-        });
-    }
-
-    // Inline editing logic for order entries
-    $(document).on('click', '.excel-order-table .editable-order', function() {
-        if ($(this).find('input').length) return;
-        const td = $(this);
-        const oldValue = td.text();
-        const field = td.data('field');
-        const tr = td.closest('tr');
-        const key = tr.data('key');
-        const input = $('<input type="text" class="form-control form-control-sm" style="min-width:80px;max-width:160px;">').val(oldValue);
-        td.empty().append(input);
-        input.focus();
-        input.on('keydown', function(e) {
-            if (e.key === 'Enter') {
-                saveEdit();
-            } else if (e.key === 'Escape') {
-                td.text(oldValue);
-            }
-        });
-        input.on('blur', saveEdit);
-        function saveEdit() {
-            const newValue = input.val();
-            if (newValue !== oldValue) {
-                const updateObj = {};
-                updateObj[field] = newValue;
-                update(ref(db, 'Orders/' + key), updateObj).then(() => {
-                    td.text(newValue).addClass('cell-updated');
-                    setTimeout(() => td.removeClass('cell-updated'), 800);
-                });
-            } else {
-                td.text(oldValue);
-            }
-        }
-    });
-
-    // Delete row logic for order entries
-    $(document).on('click', '.excel-order-table .delete-order-row', function() {
-        const tr = $(this).closest('tr');
-        const key = tr.data('key');
-        if (confirm('Are you sure you want to delete this order?')) {
-            remove(ref(db, 'Orders/' + key));
-        }
-    });
-
-    // Sticky header CSS for order tables
-    const styleOrder = document.createElement('style');
-    styleOrder.innerHTML = `.excel-order-table th { position: sticky; top: 0; background: #e0eafc; z-index: 2; }`;
-    document.head.appendChild(styleOrder);
-
-    // Hide old topbar nav
-    $('.glass-tab-nav').hide();
-
-    // --- Advanced Analytics Dashboard Logic ---
-    const analyticsCardsConfig = [
-        { key: 'totalStock', label: '総在庫数', icon: 'fa-boxes-stacked', render: renderTotalStock },
-        { key: 'stockByItem', label: 'カタログ別在庫', icon: 'fa-layer-group', render: renderStockByItem },
-        { key: 'avgStock', label: '平均在庫数', icon: 'fa-chart-bar', render: renderAvgStock },
-        { key: 'stockTrend', label: '在庫トレンド', icon: 'fa-chart-line', render: renderStockTrend },
-        { key: 'stockMovement', label: '在庫動向(受領/発行)', icon: 'fa-arrows-left-right', render: renderStockMovement },
-        { key: 'lowStock', label: '在庫不足アラート', icon: 'fa-triangle-exclamation', render: renderLowStock },
-        { key: 'stockoutRate', label: '在庫切れ率', icon: 'fa-percent', render: renderStockoutRate },
-        { key: 'totalOrders', label: '総注文数', icon: 'fa-cart-shopping', render: renderTotalOrders },
-        { key: 'totalQtyOrdered', label: '総注文数量', icon: 'fa-cubes', render: renderTotalQtyOrdered },
-        { key: 'ordersByItem', label: 'カタログ別注文', icon: 'fa-list-ol', render: renderOrdersByItem },
-        { key: 'ordersByRequester', label: '依頼者別注文', icon: 'fa-user-friends', render: renderOrdersByRequester },
-        { key: 'avgOrderQty', label: '平均注文数量', icon: 'fa-divide', render: renderAvgOrderQty },
-        { key: 'topIssued', label: '発行数トップ', icon: 'fa-ranking-star', render: renderTopIssued },
-        { key: 'topOrdered', label: '注文数トップ', icon: 'fa-ranking-star', render: renderTopOrdered },
-        { key: 'leastPopular', label: '不人気カタログ', icon: 'fa-face-frown', render: renderLeastPopular },
-        { key: 'catalogStockOrderCompare', label: 'カタログ別在庫・注文比較', icon: 'fa-chart-column', render: renderCatalogStockOrderCompare },
-    ];
-    const analyticsDefault = ['totalStock','stockByItem','avgStock','stockTrend','stockMovement','lowStock','stockoutRate','totalOrders','totalQtyOrdered','ordersByItem','ordersByRequester','avgOrderQty','topIssued','topOrdered','leastPopular'];
-    function getAnalyticsSelection() {
-        return JSON.parse(localStorage.getItem('analyticsSelection') || JSON.stringify(analyticsDefault));
-    }
-    function setAnalyticsSelection(selection) {
-        localStorage.setItem('analyticsSelection', JSON.stringify(selection));
-    }
-    function renderAnalyticsDashboard(catalogData, orderData) {
-        const selection = getAnalyticsSelection();
-        const container = document.getElementById('analyticsCards');
-        container.innerHTML = '';
-        analyticsCardsConfig.forEach(card => {
-            if (selection.includes(card.key)) {
-                const cardDiv = document.createElement('div');
-                cardDiv.className = 'glass-card';
-                cardDiv.style.flex = '1 1 350px';
-                cardDiv.innerHTML = `<h2><i class="fa-solid ${card.icon}"></i> ${card.label}</h2><div id="analytics-${card.key}"></div>`;
-                container.appendChild(cardDiv);
-                card.render(catalogData, orderData);
-            }
-        });
-    }
-    // --- Analytics Card Renderers ---
-    function getDateRange() {
-        const preset = document.getElementById('analyticsDatePreset').value;
-        if (preset !== 'custom') {
-            const days = Number(preset);
-            const end = new Date();
-            const start = new Date();
-            start.setDate(end.getDate() - days + 1);
-            return { start, end };
-        } else {
-            const start = new Date(document.getElementById('analyticsDateStart').value);
-            const end = new Date(document.getElementById('analyticsDateEnd').value);
-            return { start, end };
-        }
-    }
-    function filterByDate(data, dateField) {
-        const { start, end } = getDateRange();
-        return Object.values(data).filter(e => {
-            const d = new Date(e[dateField]);
-            return d >= start && d <= end;
-        });
-    }
-    function renderTotalStock(catalogData) {
-        const arr = filterByDate(catalogData, 'ReceiptDate');
-        let total = 0;
-        for (const e of arr) total += Number(e.StockQuantity || 0);
-        document.getElementById('analytics-totalStock').innerHTML = `<div style="font-size:2.2rem;font-weight:600;color:#232946;">${total}</div>`;
-    }
-    function renderStockByItem(catalogData) {
-        const arr = filterByDate(catalogData, 'ReceiptDate');
-        const byItem = {};
-        arr.forEach(e => { byItem[e.CatalogName] = (byItem[e.CatalogName]||0) + Number(e.StockQuantity||0); });
-        const labels = Object.keys(byItem);
-        const data = Object.values(byItem);
-        const ctxId = 'analytics-stockByItem-canvas';
-        let canvas = document.getElementById(ctxId);
-        if (!canvas) {
-            canvas = document.createElement('canvas');
-            canvas.id = ctxId;
-            document.getElementById('analytics-stockByItem').appendChild(canvas);
-        }
-        if (window.stockByItemChart) window.stockByItemChart.destroy();
-        window.stockByItemChart = new Chart(canvas, {
-            type: 'bar',
-            data: { labels, datasets: [{ label: '在庫数量', data, backgroundColor: 'rgba(75,192,192,0.5)' }] },
-            options: { plugins: { legend: { display: false } }, scales: { y: { beginAtZero: true } } }
-        });
-    }
-    function renderAvgStock(catalogData) {
-        const arr = filterByDate(catalogData, 'ReceiptDate');
-        if (arr.length === 0) {
-            document.getElementById('analytics-avgStock').innerHTML = '<span>--</span>';
-            return;
-        }
-        let total = 0;
-        for (const e of arr) total += Number(e.StockQuantity || 0);
-        const avg = (total / arr.length).toFixed(1);
-        document.getElementById('analytics-avgStock').innerHTML = `<div style="font-size:2.2rem;font-weight:600;color:#232946;">${avg}</div>`;
-    }
-    function renderStockTrend(catalogData) {
-        // Group by ReceiptDate (last 30 days)
-        const dateMap = {};
-        const today = new Date();
-        for (const key in catalogData) {
-            const entry = catalogData[key];
-            if (!entry.ReceiptDate) continue;
-            const d = new Date(entry.ReceiptDate);
-            const diff = (today - d) / (1000*60*60*24);
-            if (diff >= 0 && diff <= 30) {
-                dateMap[entry.ReceiptDate] = (dateMap[entry.ReceiptDate]||0) + Number(entry.StockQuantity||0);
-            }
-        }
-        const labels = Object.keys(dateMap).sort();
-        const data = labels.map(l=>dateMap[l]);
-        const ctxId = 'analytics-stockTrend-canvas';
-        let canvas = document.getElementById(ctxId);
-        if (!canvas) {
-            canvas = document.createElement('canvas');
-            canvas.id = ctxId;
-            document.getElementById('analytics-stockTrend').appendChild(canvas);
-        }
-        if (window.stockTrendChart) window.stockTrendChart.destroy && window.stockTrendChart.destroy();
-        window.stockTrendChart = new Chart(canvas, {
-            type: 'line',
-            data: { labels, datasets: [{ label: '在庫数量', data, borderColor: '#232946', backgroundColor: 'rgba(75,192,192,0.2)', fill: true }] },
-            options: { plugins: { legend: { display: false } }, scales: { y: { beginAtZero: true } } }
-        });
-    }
-    function renderStockMovement(catalogData) {
-        const arr = filterByDate(catalogData, 'ReceiptDate');
-        let totalReceived = 0, totalIssued = 0;
-        arr.forEach(e => {
-            totalReceived += Number(e.QuantityReceived||0);
-            totalIssued += Number(e.IssueQuantity||0);
-        });
-        const ctxId = 'analytics-stockMovement-canvas';
-        let canvas = document.getElementById(ctxId);
-        if (!canvas) {
-            canvas = document.createElement('canvas');
-            canvas.id = ctxId;
-            document.getElementById('analytics-stockMovement').appendChild(canvas);
-        }
-        if (window.stockMovementChart) window.stockMovementChart.destroy();
-        window.stockMovementChart = new Chart(canvas, {
-            type: 'bar',
-            data: { labels: ['受領', '発行'], datasets: [{ label: '数量', data: [totalReceived, totalIssued], backgroundColor: ['#4bc0c0','#ff6384'] }] },
-            options: { plugins: { legend: { display: false } }, scales: { y: { beginAtZero: true } } }
-        });
-    }
-    function renderLowStock(catalogData) {
-        const arr = filterByDate(catalogData, 'ReceiptDate');
-        const threshold = 100; // You can make this user-configurable
-        const low = arr.filter(e => Number(e.StockQuantity||0) < threshold);
-        let html = '<ul style="padding-left:1.2em;">';
-        low.forEach(e => { html += `<li>${e.CatalogName} <span style='color:#e74c3c'>(在庫: ${e.StockQuantity})</span></li>`; });
-        html += low.length === 0 ? '<li>該当なし</li>' : '';
-        html += '</ul>';
-        document.getElementById('analytics-lowStock').innerHTML = html;
-    }
-    function renderStockoutRate(catalogData) {
-        const arr = filterByDate(catalogData, 'ReceiptDate');
-        const out = arr.filter(e => Number(e.StockQuantity||0) === 0).length;
-        const rate = arr.length ? ((out/arr.length)*100).toFixed(1) : '--';
-        document.getElementById('analytics-stockoutRate').innerHTML = `<div style="font-size:2.2rem;font-weight:600;color:#232946;">${rate}%</div>`;
-    }
-    function renderTotalOrders(_, orderData) {
-        const arr = filterByDate(orderData, 'OrderDate');
-        document.getElementById('analytics-totalOrders').innerHTML = `<div style="font-size:2.2rem;font-weight:600;color:#232946;">${arr.length}</div>`;
-    }
-    function renderTotalQtyOrdered(_, orderData) {
-        const arr = filterByDate(orderData, 'OrderDate');
-        let total = 0;
-        for (const e of arr) total += Number(e.OrderQuantity||0);
-        document.getElementById('analytics-totalQtyOrdered').innerHTML = `<div style="font-size:2.2rem;font-weight:600;color:#232946;">${total}</div>`;
-    }
-    function renderOrdersByItem(_, orderData) {
-        const arr = filterByDate(orderData, 'OrderDate');
-        const byItem = {};
-        arr.forEach(e => { byItem[e.CatalogName] = (byItem[e.CatalogName]||0) + Number(e.OrderQuantity||0); });
-        const labels = Object.keys(byItem);
-        const data = Object.values(byItem);
-        const ctxId = 'analytics-ordersByItem-canvas';
-        let canvas = document.getElementById(ctxId);
-        if (!canvas) {
-            canvas = document.createElement('canvas');
-            canvas.id = ctxId;
-            document.getElementById('analytics-ordersByItem').appendChild(canvas);
-        }
-        if (window.ordersByItemChart) window.ordersByItemChart.destroy();
-        window.ordersByItemChart = new Chart(canvas, {
-            type: 'bar',
-            data: { labels, datasets: [{ label: '注文数量', data, backgroundColor: 'rgba(153,102,255,0.5)' }] },
-            options: { plugins: { legend: { display: false } }, scales: { y: { beginAtZero: true } } }
-        });
-    }
-    function renderOrdersByRequester(_, orderData) {
-        const arr = filterByDate(orderData, 'OrderDate');
-        const byReq = {};
-        arr.forEach(e => { byReq[e.Requester] = (byReq[e.Requester]||0) + Number(e.OrderQuantity||0); });
-        const labels = Object.keys(byReq);
-        const data = Object.values(byReq);
-        const ctxId = 'analytics-ordersByRequester-canvas';
-        let canvas = document.getElementById(ctxId);
-        if (!canvas) {
-            canvas = document.createElement('canvas');
-            canvas.id = ctxId;
-            document.getElementById('analytics-ordersByRequester').appendChild(canvas);
-        }
-        if (window.ordersByRequesterChart) window.ordersByRequesterChart.destroy();
-        window.ordersByRequesterChart = new Chart(canvas, {
-            type: 'bar',
-            data: { labels, datasets: [{ label: '注文数量', data, backgroundColor: 'rgba(255,205,86,0.5)' }] },
-            options: { plugins: { legend: { display: false } }, scales: { y: { beginAtZero: true } } }
-        });
-    }
-    function renderAvgOrderQty(_, orderData) {
-        const arr = filterByDate(orderData, 'OrderDate');
-        if (arr.length === 0) {
-            document.getElementById('analytics-avgOrderQty').innerHTML = '<span>--</span>';
-            return;
-        }
-        let total = 0;
-        for (const e of arr) total += Number(e.OrderQuantity||0);
-        const avg = (total / arr.length).toFixed(1);
-        document.getElementById('analytics-avgOrderQty').innerHTML = `<div style="font-size:2.2rem;font-weight:600;color:#232946;">${avg}</div>`;
-    }
-    function renderTopIssued(_, orderData) {
-        const arr = filterByDate(orderData, 'OrderDate');
-        const byItem = {};
-        arr.forEach(e => { byItem[e.CatalogName] = (byItem[e.CatalogName]||0) + Number(e.IssueQuantity||0); });
-        const sorted = Object.entries(byItem).sort((a,b)=>b[1]-a[1]).slice(0,5);
-        let html = '<ol style="padding-left:1.2em;">';
-        sorted.forEach(([name, count]) => { html += `<li>${name} <span style='color:#888;font-size:1rem;'>(発行数: ${count})</span></li>`; });
-        html += '</ol>';
-        document.getElementById('analytics-topIssued').innerHTML = html;
-    }
-    function renderTopOrdered(_, orderData) {
-        const arr = filterByDate(orderData, 'OrderDate');
-        const byItem = {};
-        arr.forEach(e => { byItem[e.CatalogName] = (byItem[e.CatalogName]||0) + 1; });
-        const sorted = Object.entries(byItem).sort((a,b)=>b[1]-a[1]).slice(0,5);
-        let html = '<ol style="padding-left:1.2em;">';
-        sorted.forEach(([name, count]) => { html += `<li>${name} <span style='color:#888;font-size:1rem;'>(注文数: ${count})</span></li>`; });
-        html += '</ol>';
-        document.getElementById('analytics-topOrdered').innerHTML = html;
-    }
-    function renderLeastPopular(_, orderData) {
-        const arr = filterByDate(orderData, 'OrderDate');
-        const byItem = {};
-        arr.forEach(e => { byItem[e.CatalogName] = (byItem[e.CatalogName]||0) + 1; });
-        const sorted = Object.entries(byItem).sort((a,b)=>a[1]-b[1]).slice(0,5);
-        let html = '<ol style="padding-left:1.2em;">';
-        sorted.forEach(([name, count]) => { html += `<li>${name} <span style='color:#888;font-size:1rem;'>(注文数: ${count})</span></li>`; });
-        html += '</ol>';
-        document.getElementById('analytics-leastPopular').innerHTML = html;
-    }
-    function renderCatalogStockOrderCompare(catalogData, orderData) {
-        // Gather all unique catalog names
-        const allCatalogs = Array.from(new Set([
-            ...Object.values(catalogData).map(e => e.CatalogName),
-            ...Object.values(orderData).map(e => e.CatalogName)
-       
-        ])).filter(Boolean);
-        // Create select UI
-        const container = document.getElementById('analytics-catalogStockOrderCompare');
-        container.innerHTML = `<div style='margin-bottom:12px;'>
-            <label style='font-weight:500;'>カタログ選択:</label>
-            <select id='compareCatalogSelect' multiple style='min-width:180px;max-width:100%;padding:4px 8px;border-radius:8px;'>
-                ${allCatalogs.map(cat => `<option value='${cat}'>${cat}</option>`).join('')}
-            </select>
-        </div>
-        <canvas id='catalogStockOrderCompareChart' height='120'></canvas>`;
-        // Default: select all
-        const select = container.querySelector('#compareCatalogSelect');
-        for (let i=0; i<select.options.length; ++i) select.options[i].selected = true;
-        function updateChart() {
-            const selected = Array.from(select.selectedOptions).map(o=>o.value);
-            // Stock: get latest stock for each selected catalog
-            const stockByCat = {};
-            Object.values(catalogData).forEach(e => {
-                if (selected.includes(e.CatalogName)) {
-                    stockByCat[e.CatalogName] = Number(e.StockQuantity||0);
-                }
-            });
-            // Orders: sum order quantity for each selected catalog
-            const orderByCat = {};
-            Object.values(orderData).forEach(e => {
-                if (selected.includes(e.CatalogName)) {
-                    orderByCat[e.CatalogName] = (orderByCat[e.CatalogName]||0) + Number(e.OrderQuantity||0);
-                }
-            });
-            const labels = selected;
-            const stockData = labels.map(cat => stockByCat[cat]||0);
-            const orderDataArr = labels.map(cat => orderByCat[cat]||0);
-            // Draw chart
-            const ctx = document.getElementById('catalogStockOrderCompareChart').getContext('2d');
-            if (window.catalogStockOrderCompareChartObj) window.catalogStockOrderCompareChartObj.destroy();
-            window.catalogStockOrderCompareChartObj = new Chart(ctx, {
-                type: 'bar',
-                data: {
-                    labels,
-                    datasets: [
-                        { label: '在庫数量', data: stockData, backgroundColor: 'rgba(75,192,192,0.7)' },
-                        { label: '注文数量', data: orderDataArr, backgroundColor: 'rgba(255,99,132,0.7)' }
-                    ]
-
-                },
-                options: {
-                    responsive: true,
-                    plugins: { legend: { position: 'top' } },
-
-                    scales: { y: { beginAtZero: true } }
-                }
-            });
-        }
-        select.addEventListener('change', updateChart);
-        updateChart();
-    }
-
-    // --- Analytics Modal Logic ---
-    // Update modal to include new cards
-    document.getElementById('analyticsCustomizeForm').innerHTML = analyticsCardsConfig.map(card => `
-      <div class="form-check">
-        <input class="form-check-input" type="checkbox" value="${card.key}" id="chk${card.key}">
-        <label class="form-check-label" for="chk${card.key}">${card.label}</label>
-      </div>
-    `).join('');
-    $('#customizeAnalyticsBtn').on('click', function() {
-        const selection = getAnalyticsSelection();
-        $('#analyticsCustomizeForm input[type=checkbox]').each(function() {
-            $(this).prop('checked', selection.includes($(this).val()));
-        });
-        $('#analyticsCustomizeModal').modal('show');
-    });
-    $('#saveAnalyticsCustomize').on('click', function() {
-        const selected = [];
-        $('#analyticsCustomizeForm input[type=checkbox]:checked').each(function() {
-            selected.push($(this).val());
-        });
-        if (selected.length === 0) {
-            alert('少なくとも1つのカードを選択してください。');
-            return;
-        }
-        setAnalyticsSelection(selected);
-        $('#analyticsCustomizeModal').modal('hide');
-        // Re-render analytics
-        fetchAndRenderAnalytics();
-    });
-    // --- Date Range Filter Logic ---
-    $('#analyticsDatePreset').on('change', function() {
-        if (this.value === 'custom') {
-            $('#analyticsDateStart,#analyticsDateEnd,#analyticsDateDash').show();
-        } else {
-            $('#analyticsDateStart,#analyticsDateEnd,#analyticsDateDash').hide();
-            fetchAndRenderAnalytics();
-        }
-    });
-    $('#analyticsDateStart,#analyticsDateEnd').on('change', function() {
-        if ($('#analyticsDatePreset').val() === 'custom') {
-            fetchAndRenderAnalytics();
-        }
-    });
-    function fetchAndRenderAnalytics() {
-        // Fetch both catalog and order data
-        const catalogRef = ref(db, 'Catalogs/');
-        const orderRef = ref(db, 'Orders/');
-        get(catalogRef).then(cSnap => {
-            const catalogData = cSnap.exists() ? cSnap.val() : {};
-            // Add OrderDate to orderData for filtering
-            get(orderRef).then(oSnap => {
-                let orderData = oSnap.exists() ? oSnap.val() : {};
-                for (const key in orderData) {
-                    if (!orderData[key].OrderDate) {
-                        // Try to parse from key (CatalogName_timestamp)
-                        const ts = key.split('_').pop();
-                        if (!isNaN(Number(ts))) orderData[key].OrderDate = new Date(Number(ts)).toISOString().slice(0,10);
-                        else orderData[key].OrderDate = '';
-                    }
-                }
-                renderAnalyticsDashboard(catalogData, orderData);
-            });
-        });
-    }
-    // Initial render
-    renderCatalogTable();
-    // Show only the first tab on load
-    $('.tab-section').hide();
-    $('#tab-manageCatalog').show();
-    // On page load, hide date range card
-    $('#analyticsDateRangeCard').hide();
-    // On analytics tab show, also show date range card
-    $('.glass-tab-btn[data-tab="analytics"]').on('click', function() {
-        $('#analyticsDateRangeCard').show();
-        fetchAndRenderAnalytics();
-    });
-
-    // --- Sample Data & Delete All Buttons Logic ---
-    // Delete all catalog and order data
-    function clearAllGeneratedData() {
-        if (!confirm('本当に全てのカタログ・注文データを削除しますか？')) return;
-        Promise.all([
-            remove(ref(db, 'Catalogs/')),
-            remove(ref(db, 'Orders/'))
-        ]).then(() => {
-            alert('全データを削除しました');
-            renderCatalogTablesAccordion && renderCatalogTablesAccordion();
-            renderOrderTablesAccordion && renderOrderTablesAccordion();
-        }).catch(e => alert('削除に失敗: ' + e));
-    }
-    // Delete all catalog data only
-    function clearAllCatalogData() {
-        if (!confirm('本当に全てのカタログデータを削除しますか？')) return;
-        remove(ref(db, 'Catalogs/')).then(() => {
-            alert('カタログデータを削除しました');
-            renderCatalogTablesAccordion && renderCatalogTablesAccordion();
-        }).catch(e => alert('削除に失敗: ' + e));
-    }
-    // Delete all order data only
-    function clearAllOrderData() {
-        if (!confirm('本当に全ての注文データを削除しますか？')) return;
-        remove(ref(db, 'Orders/')).then(() => {
-            alert('注文データを削除しました');
-            renderOrderTablesAccordion && renderOrderTablesAccordion();
-        }).catch(e => alert('削除に失敗: ' + e));
-    }
-    // Generate sample catalog data
-    function generateSampleCatalogData() {
-        const samples = [
-            { CatalogName: 'カタログA', ReceiptDate: '2025-07-01', QuantityReceived: 200, DeliveryDate: '2025-07-02', IssueQuantity: 50, StockQuantity: 150, DistributionDestination: '営業部', Requester: '田中', Remarks: '初回入庫' },
-            { CatalogName: 'カタログB', ReceiptDate: '2025-07-01', QuantityReceived: 120, DeliveryDate: '2025-07-03', IssueQuantity: 20, StockQuantity: 100, DistributionDestination: '技術部', Requester: '佐藤', Remarks: '' },
-            { CatalogName: 'カタログC', ReceiptDate: '2025-07-01', QuantityReceived: 80, DeliveryDate: '2025-07-04', IssueQuantity: 10, StockQuantity: 70, DistributionDestination: '管理部', Requester: '鈴木', Remarks: '' }
-        ];
-        const updates = {};
-        samples.forEach(s => { updates[s.CatalogName] = s; });
-        set(ref(db, 'Catalogs/'), updates).then(() => {
-            alert('サンプルカタログデータを生成しました');
-            renderCatalogTablesAccordion && renderCatalogTablesAccordion();
-        }).catch(e => alert('生成に失敗: ' + e));
-    }
-    // Generate sample order data
-    function generateSampleOrderData() {
-        const now = Date.now();
-        const samples = [
-            { CatalogName: 'カタログA', OrderQuantity: 10, Requester: '田中', Message: '至急お願いします', OrderDate: '2025-07-01' },
-            { CatalogName: 'カタログB', OrderQuantity: 5, Requester: '佐藤', Message: '通常納品', OrderDate: '2025-07-01' },
-            { CatalogName: 'カタログC', OrderQuantity: 8, Requester: '鈴木', Message: '備考なし', OrderDate: '2025-07-01' }
-        ];
-        const updates = {};
-        samples.forEach((s, i) => {
-            updates[s.CatalogName + '_' + (now + i)] = s;
-        });
-        set(ref(db, 'Orders/'), updates).then(() => {
-            alert('サンプル注文データを生成しました');
-            renderOrderTablesAccordion && renderOrderTablesAccordion();
-        }).catch(e => alert('生成に失敗: ' + e));
-    }
-    // Button event bindings
-    $(document).on('click', '#deleteAllCatalogBtn', clearAllCatalogData);
-    $(document).on('click', '#generateSampleCatalogBtn', generateSampleCatalogData);
-    $(document).on('click', '#deleteAllOrderBtn', clearAllOrderData);
-    $(document).on('click', '#generateSampleOrderBtn', generateSampleOrderData);
-    // For test/demo: expose clearAllGeneratedData globally
-    window.clearAllGeneratedData = clearAllGeneratedData;
-</script>
-<script type="module">
-// --- Sample Data Generation for Catalog Entries (moved to main script) ---
-import { ref, set } from "https://www.gstatic.com/firebasejs/10.14.1/firebase-database.js";
-import { getDatabase } from "https://www.gstatic.com/firebasejs/10.14.1/firebase-database.js";
-const db2 = getDatabase();
-document.getElementById('generateSampleCatalogBtn').addEventListener('click', function() {
-    // Catalog names from the select options
-    const catalogNames = [
-        "⼯作機械⽤油圧機器",
-        "プラスチック加⼯機械⽤油圧機器",
-        "A3HGシリーズ⾼圧可変ピストンポンプ",
-        "A3HMシリーズ高圧可変ピストンポンプ",
-        "The ASR series Ultimate hydraulic control system",
-        "ASRシリーズACサーボモータ駆動ポンプ",
-        "ロジック弁",
-        "インライン形プレフィル弁",
-        "センタDINコネクタ形電磁弁",
-        "リニューアルアンプ搭載Gシリーズ可変ショックレス形電磁切換弁"
-    ];
-    const destinations = ["東京工場","大阪工場","名古屋工場","福岡工場","札幌工場","仙台工場","広島工場","神戸工場","京都工場","横浜工場"];
-    const requesters = ["田中","佐藤","鈴木","高橋","伊藤","渡辺","山本","中村","小林","加藤"];
-    let count = 0;
-    for (let i = 0; i < catalogNames.length; i++) {
-        for (let j = 0; j < 10; j++) {
-            const baseDate = new Date(2025, 5, 1 + j); // June 1 + j
-            const receiptDate = baseDate.toISOString().slice(0,10);
-            const deliveryDate = new Date(baseDate.getTime() + 4*24*60*60*1000).toISOString().slice(0,10);
-            const qtyReceived = Math.floor(Math.random()*100)+10;
-            const qtyIssued = Math.floor(Math.random()*qtyReceived);
-            const stockQty = qtyReceived - qtyIssued;
-            const entry = {
-                CatalogName: catalogNames[i],
-                ReceiptDate: receiptDate,
-                QuantityReceived: qtyReceived,
-                DeliveryDate: deliveryDate,
-                IssueQuantity: qtyIssued,
-                StockQuantity: stockQty,
-                DistributionDestination: destinations[(i+j)%destinations.length],
-                Requester: requesters[(i+j)%requesters.length],
-                Remarks: j === 0 ? "初回入庫" : ""
-            };
-            set(ref(db2, "Catalogs/" + catalogNames[i] + "_" + j + "_" + Date.now()), entry);
-            count++;
-        }
-    }
-    alert("サンプルデータ(" + count + "件)を追加しました。");
-});
-</script>
-<script>
-// --- Rich Text Toolbar for 注文メッセージ ---
-function formatOrderMsg(cmd) {
-    const msgDiv = document.getElementById('OrderMessage');
-    msgDiv.focus();
-    if (cmd === 'indent') {
-        document.execCommand('indent');
-    } else if (cmd === 'outdent') {
-        document.execCommand('outdent');
-    } else {
-        document.execCommand(cmd, false, null);
-    }
-}
-function formatOrderMsgColor() {
-    const color = prompt('色コードまたは色名を入力 (例: red, #e74c3c):', '#e74c3c');
-    if (color) {
-        document.execCommand('foreColor', false, color);
-    }
-}
-function formatOrderMsgFontSize() {
-    let size = prompt('フォントサイズ (1=小, 7=大, 通常は3):', '3'); 
-    if (size && !isNaN(size) && size >= 1 && size <= 7) {
-        document.execCommand('fontSize', false, size);
-    }
-}
-</script>
-</body>
-</html>
-

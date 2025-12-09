@@ -23,8 +23,8 @@ let router;
 document.addEventListener('DOMContentLoaded', async () => {
     // Create and initialize router
     router = new Router(pages);
-    router.init();
+    await router.init();
+    
+    // Expose router globally for accessing navigation if needed
+    window.router = router;
 });
-
-// Expose router globally for accessing navigation if needed
-window.router = router;

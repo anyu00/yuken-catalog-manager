@@ -1157,31 +1157,6 @@
     styleOrder.innerHTML = `.excel-order-table th { position: sticky; top: 0; background: #e0eafc; z-index: 2; }`;
     document.head.appendChild(styleOrder);
 
-    // Remove old topbar nav logic and update for sidebar
-    $('.sidebar-nav-btn').on('click', function() {
-        $('.sidebar-nav-btn').removeClass('active');
-        $(this).addClass('active');
-        const tab = $(this).data('tab');
-        $('.tab-section').hide();
-        $('#tab-' + tab).show();
-        if (tab === 'stockCalendar') {
-            if (!calendar) {
-                initializeCalendar();
-            }
-        }
-        if (tab === 'orderEntries') {
-            renderOrderTablesAccordion();
-        }
-        if (tab === 'catalogEntries') {
-            renderCatalogTablesAccordion();
-        }
-        if (tab === 'analytics') {
-            $('#analyticsDateRangeCard').show();
-            fetchAndRenderAnalytics();
-        } else {
-            $('#analyticsDateRangeCard').hide();
-        }
-    });
     // Hide old topbar nav
     $('.glass-tab-nav').hide();
 

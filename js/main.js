@@ -5,7 +5,6 @@ import { orderEntriesPage } from './pages/order-entries.js';
 import { reportsPage } from './pages/reports.js';
 import { stockCalendarPage } from './pages/stock-calendar.js';
 import { analyticsPage } from './pages/analytics.js';
-import Router from './utils/router.js';
 
 const pages = {
     manageCatalog: manageCatalogPage,
@@ -17,14 +16,34 @@ const pages = {
     analytics: analyticsPage
 };
 
-let router;
-
 // Initialize on DOM ready
 document.addEventListener('DOMContentLoaded', async () => {
-    // Create and initialize router
-    router = new Router(pages);
-    await router.init();
+    // Simple tab switching - no routing
+    $('.sidebar-nav-btn').on('click', function(e) {
+        e.preventDefault();
+        $('.sidebar-nav-btn').removeClass('active');
+        $(this).addClass('active');
+        const tab = $(this).data('tab');
+        $('.tab-section').hide();
+        $('#tab-' + tab).show();
+        
+        // Initialize the page module when tab is clicked
+        if (pages[tab] && pages[tab].init) {
+            try {
+                pages[tab].init();
+            } catch (error) {
+                console.error(`Error initializing ${tab} page:`, error);
+            }
+        }
+    });
     
-    // Expose router globally for accessing navigation if needed
-    window.router = router;
+    // Initialize first tab on load
+    const firstTab = 'manageCatalog';
+    if (pages[firstTab] && pages[firstTab].init) {
+        try {
+            pages[firstTab].init();
+        } catch (error) {
+            console.error(`Error initializing ${firstTab} page:`, error);
+        }
+    }
 });

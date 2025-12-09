@@ -1,18 +1,41 @@
-import { initializeApp } from "https://www.gstatic.com/firebasejs/10.14.1/firebase-app.js";
-import { getDatabase, ref, set, get, update, remove, onValue } from "https://www.gstatic.com/firebasejs/10.14.1/firebase-database.js";
+// Firebase Configuration and Utility Functions
+// Import Firebase modules from CDN
+import { initializeApp } from 'https://www.gstatic.com/firebasejs/10.7.0/firebase-app.js';
+import { getDatabase, ref, set, get, update, remove, onValue, child } from 'https://www.gstatic.com/firebasejs/10.7.0/firebase-database.js';
 
+// Firebase configuration - Replace with your actual config
 const firebaseConfig = {
-    apiKey: "AIzaSyADYPqT2qs_EVWah2KjplnojX5Ypyuu0QE",
-    authDomain: "catalog-app-new-a7274.firebaseapp.com",
-    databaseURL: "https://catalog-app-new-a7274-default-rtdb.firebaseio.com",
-    projectId: "catalog-app-new-a7274",
-    storageBucket: "catalog-app-new-a7274.firebasestorage.app",
+    apiKey: "AIzaSyDCJW9t2gXyJpjinqXstPyuuQQE",
+    authDomain: "yuken-catalog-app.firebaseapp.com",
+    databaseURL: "https://yuken-app-new-07274.firebaseio.com",
+    projectId: "yuken-app-new-07274",
+    storageBucket: "yuken-catalog-app-new-07274.firebasestorage.app",
     messagingSenderId: "34747584227",
-    appId: "1:34747584227:web:af270008cf3fedc318ffd6",
-    measurementId: "G-M3KBC1NEZM"
+    appId: "1:34747584227:web:b270008cfdedc3ff6fd5"
 };
 
-const app = initializeApp(firebaseConfig);
-const db = getDatabase(app);
+// Initialize Firebase
+let app;
+let db;
 
-export { db, ref, set, get, update, remove, onValue };
+try {
+    app = initializeApp(firebaseConfig);
+    db = getDatabase(app);
+    console.log('✅ Firebase initialized successfully');
+} catch (error) {
+    console.error('❌ Firebase initialization error:', error);
+}
+
+// Export all Firebase utilities
+export {
+    app,
+    db,
+    ref,
+    set,
+    get,
+    update,
+    remove,
+    onValue,
+    child,
+    getDatabase
+};

@@ -140,14 +140,14 @@ export const catalogEntriesPage = {
                         totalIssued += qtyIssued;
 
                         return `
-                            <tr data-key="${entry._key}">
-                                <td class="editable" data-field="CatalogName">${entry.CatalogName}</td>
-                                <td class="editable" data-field="ReceiptDate">${entry.ReceiptDate}</td>
-                                <td class="editable" data-field="QuantityReceived">${entry.QuantityReceived}</td>
-                                <td class="editable" data-field="DeliveryDate">${entry.DeliveryDate}</td>
-                                <td class="editable" data-field="IssueQuantity">${entry.IssueQuantity}</td>
-                                <td><span class="calculated-stock">${stock}</span></td>
-                                <td class="editable" data-field="DistributionDestination">${entry.DistributionDestination}</td>
+                            <tr data-key="${entry._key}" class="catalog-table-row">
+                                <td class="editable cell-catalog" data-field="CatalogName">${entry.CatalogName}</td>
+                                <td class="editable cell-date" data-field="ReceiptDate">${entry.ReceiptDate}</td>
+                                <td class="editable cell-number" data-field="QuantityReceived">${entry.QuantityReceived}</td>
+                                <td class="editable cell-date" data-field="DeliveryDate">${entry.DeliveryDate}</td>
+                                <td class="editable cell-number" data-field="IssueQuantity">${entry.IssueQuantity}</td>
+                                <td class="cell-stock"><span class="calculated-stock badge badge-info" style="font-size:1rem;padding:6px 10px;">${stock}</span></td>
+                                <td class="editable cell-destination" data-field="DistributionDestination">${entry.DistributionDestination}</td>
                                 <td class="editable" data-field="Requester">${entry.Requester}</td>
                                 <td class="editable" data-field="Remarks">${entry.Remarks}</td>
                                 <td>

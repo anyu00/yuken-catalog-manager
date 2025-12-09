@@ -136,13 +136,13 @@ export const orderEntriesPage = {
                                     </thead>
                                     <tbody>
                                         ${catalogs[catName].map(entry => `
-                                            <tr data-key="${entry._key}">
-                                                <td class="editable-order" data-field="CatalogName">${entry.CatalogName}</td>
-                                                <td class="editable-order" data-field="OrderQuantity">${entry.OrderQuantity}</td>
-                                                <td class="editable-order" data-field="Requester">${entry.Requester}</td>
-                                                <td>${entry.Message ? `<div style='max-width:320px;overflow-x:auto;'>${entry.Message}</div>` : ''}</td>
-                                                <td>
-                                                    <button class="btn btn-danger btn-sm delete-order-row">Delete</button>
+                                            <tr data-key="${entry._key}" class="catalog-table-row">
+                                                <td class="editable-order cell-catalog" data-field="CatalogName">${entry.CatalogName}</td>
+                                                <td class="editable-order cell-number" data-field="OrderQuantity">${entry.OrderQuantity}</td>
+                                                <td class="editable-order cell-destination" data-field="Requester">${entry.Requester}</td>
+                                                <td style="font-size:0.9rem;color:#555;max-width:250px;word-break:break-word;">${entry.Message ? `<div style='max-width:320px;overflow-x:auto;'>${entry.Message}</div>` : '<em style="color:#999;">なし</em>'}</td>
+                                                <td style="text-align:center;">
+                                                    <button class="delete-row delete-order-row">削除</button>
                                                 </td>
                                             </tr>
                                         `).join('')}

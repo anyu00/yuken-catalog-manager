@@ -195,6 +195,32 @@ body {
     min-width: 180px;
 }
 
+.form-group select {
+    min-height: 42px;
+    padding: 10px 36px 10px 12px;
+}
+
+.form-group select option {
+    padding: 8px 12px;
+    line-height: 1.5;
+    background: white;
+    color: #232946;
+}
+
+.form-group select option:checked {
+    background: linear-gradient(#4bc0c0, #4bc0c0);
+    background-color: #4bc0c0;
+    color: white;
+}
+
+.form-group label {
+    font-weight: 600;
+    color: #232946;
+    margin-bottom: 8px;
+    font-size: 0.95rem;
+    letter-spacing: 0.3px;
+}
+
 .form-control, select {
     border-radius: 10px;
     border: 1px solid #e0eafc;
@@ -783,6 +809,21 @@ input[type="number"],
 select,
 textarea {
     transition: all 0.2s ease;
+}
+
+/* Select dropdown enhancement */
+select {
+    appearance: none;
+    background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23232946' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3e%3cpolyline points='6 9 12 15 18 9'%3e%3c/polyline%3e%3c/svg%3e");
+    background-repeat: no-repeat;
+    background-position: right 10px center;
+    background-size: 20px;
+    padding-right: 36px;
+}
+
+select:hover,
+select:focus {
+    background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%234bc0c0' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3e%3cpolyline points='6 9 12 15 18 9'%3e%3c/polyline%3e%3c/svg%3e");
 }
 
 input[readonly] {

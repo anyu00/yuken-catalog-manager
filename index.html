@@ -1,548 +1,327 @@
-﻿<!DOCTYPE html>
-<html lang="en">
+<!DOCTYPE html>
+<html lang="ja">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>繧ｫ繧ｿ繝ｭ繧ｰ邂｡逅・ム繝・す繝･繝懊・繝・/title>
-    <link href="https://fonts.googleapis.com/css?family=Poppins:400,600&display=swap" rel="stylesheet">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" rel="stylesheet">
-    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
-    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-    <link href="https://cdn.jsdelivr.net/npm/fullcalendar@5.11.0/main.min.css" rel="stylesheet">
-    <script src="https://cdn.jsdelivr.net/npm/fullcalendar@5.11.0/main.min.js"></script>
-    <link rel="stylesheet" href="css/styles.css">
-        html, body {
-            height: 100%;
-            min-height: 100vh;
-            width: 100vw;
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-        body {
-            font-family: 'Poppins', Arial, sans-serif;
-            background: linear-gradient(120deg, #e0eafc 0%, #f8f9fa 100%);
-            min-height: 100vh;
-            min-width: 100vw;
-            height: 100vh;
-            width: 100vw;
-            margin: 0;
-            padding: 0;
-            overflow-x: hidden;
-            display: flex;
-        }
-        .sidebar {
-            width: 240px;
-            min-width: 220px;
-            background: #232946;
-            color: #fff;
-            display: flex;
-            flex-direction: column;
-            align-items: stretch;
-            padding: 0;
-            box-shadow: 2px 0 16px rgba(31,38,135,0.08);
-            z-index: 10;
-        }
-        .sidebar .sidebar-title {
-            font-size: 1.6rem;
-            font-weight: 700;
-            padding: 36px 24px 24px 32px;
-            color: #e0eafc;
-            letter-spacing: 1px;
-            border-bottom: 1px solid #3b3f5c;
-        }
-        .sidebar-nav {
-            display: flex;
-            flex-direction: column;
-            gap: 6px;
-            padding: 32px 0 0 0;
-        }
-        .sidebar-nav-btn {
-            background: none;
-            border: none;
-            color: #e0eafc;
-            text-align: left;
-            padding: 14px 32px;
-            font-size: 1.08rem;
-            font-weight: 500;
-            border-radius: 0 24px 24px 0;
-            margin-right: 12px;
-            transition: background 0.15s, color 0.15s;
-            display: flex;
-            align-items: center;
-            gap: 12px;
-        }
-        .sidebar-nav-btn.active, .sidebar-nav-btn:hover {
-            background: #e0eafc;
-            color: #232946;
-        }
-        .sidebar-actions {
-            margin-top: auto;
-            padding: 24px 32px 32px 32px;
-            display: flex;
-            gap: 16px;
-            justify-content: flex-start;
-        }
-        .sidebar-actions .icon-btn {
-            background: rgba(255,255,255,0.12);
-            border: none;
-            border-radius: 50%;
-            width: 40px;
-            height: 40px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 1.2rem;
-            color: #e0eafc;
-            transition: background 0.15s;
-        }
-        .sidebar-actions .icon-btn:hover {
-            background: #e0eafc;
-            color: #232946;
-        }
-        .main-content-shell {
-            flex: 1 1 auto;
-            display: flex;
-            flex-direction: column;
-            min-width: 0;
-            min-height: 100vh;
-            background: rgba(255,255,255,0.35);
-            backdrop-filter: blur(16px);
-            -webkit-backdrop-filter: blur(16px);
-        }
-        .glass-topbar {
-            display: flex;
-            align-items: center;
-            justify-content: flex-end;
-            padding: 32px 48px 18px 48px;
-            background: rgba(255,255,255,0.45);
-            border-bottom: 1px solid #e0eafc;
-            backdrop-filter: blur(8px);
-            -webkit-backdrop-filter: blur(8px);
-        }
-        .glass-main-content {
-            flex: 1 1 auto;
-            padding: 32px 48px 0 48px;
-            overflow-y: auto;
-        }
-        .glass-cards {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 32px;
-        }
-        .glass-card {
-            background: rgba(255,255,255,0.55);
-            border-radius: 24px;
-            box-shadow: 0 4px 24px rgba(31, 38, 135, 0.10);
-            padding: 32px 28px 28px 28px;
-            margin-bottom: 32px;
-            flex: 1 1 350px;
-            min-width: 320px;
-            max-width: 100%;
-            backdrop-filter: blur(8px);
-            -webkit-backdrop-filter: blur(8px);
-            border: 1.5px solid #e0eafc;
-        }
-        .glass-card h2 {
-            font-size: 1.25rem;
-            font-weight: 600;
-            color: #232946;
-            margin-bottom: 24px;
-        }
-        .glass-table {
-            width: 100%;
-            border-radius: 16px;
-            overflow: hidden;
-            background: rgba(255,255,255,0.7);
-            box-shadow: 0 1px 4px rgba(31, 38, 135, 0.04);
-            backdrop-filter: blur(4px);
-            -webkit-backdrop-filter: blur(4px);
-        }
-        .glass-table th, .glass-table td {
-            padding: 14px 12px;
-            border: none;
-            background: none;
-        }
-        .glass-table th {
-            background: #e0eafc;
-            color: #232946;
-            font-weight: 600;
-        }
-        .glass-table tr {
-            transition: background 0.12s;
-        }
-        .glass-table tbody tr:hover {
-            background: #f7faff;
-        }
-        .form-row {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 18px;
-        }
-        .form-group {
-            flex: 1 1 220px;
-            min-width: 180px;
-        }
-        .form-control, select {
-            border-radius: 10px;
-            border: 1px solid #e0eafc;
-            font-size: 1rem;
-            background: rgba(255,255,255,0.7);
-            box-shadow: 0 1px 4px rgba(31, 38, 135, 0.04);
-        }
-        .btn-primary {
-            background: #232946;
-            border: none;
-            border-radius: 10px;
-            font-weight: 600;
-            letter-spacing: 1px;
-            font-size: 1.1rem;
-        }
-        .btn-primary:hover {
-            background: #e0eafc;
-            color: #232946;
-        }
-        .message {
-            margin-top: 12px;
-            font-size: 1rem;
-        }
-        @media (max-width: 900px) {
-            .sidebar {
-                min-width: 60px;
-                width: 60px;
-                padding: 0;
-            }
-            .sidebar .sidebar-title {
-                font-size: 1.1rem;
-                padding: 18px 8px 12px 8px;
-            }
-            .sidebar-nav-btn {
-                font-size: 0.95rem;
-                padding: 10px 8px;
-                border-radius: 0 12px 12px 0;
-            }
-            .main-content-shell {
-                padding-left: 0;
-            }
-            .glass-main-content {
-                padding: 8px 2px 0 2px;
-            }
-        }
-        @media (max-width: 600px) {
-            .glass-main-content {
-                padding: 8px 2px 0 2px;
-            }
-    </head>
+    <title>InventHub - インベントリ管理</title>
+    
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.2/dist/css/bootstrap.min.css">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <!-- FullCalendar CSS -->
+    <link href='https://cdn.jsdelivr.net/npm/fullcalendar@5.11.0/index.global.min.css' rel='stylesheet' />
+    <!-- Modern Styles -->
+    <link rel="stylesheet" href="css/styles-modern.css">
+</head>
 <body>
-<div class="sidebar">
-    <div class="sidebar-title">繧ｫ繧ｿ繝ｭ繧ｰ邂｡逅・/div>
-    <div class="sidebar-nav">
-        <button class="sidebar-nav-btn active" data-tab="manageCatalog"><i class="fa-solid fa-box"></i> 繧ｫ繧ｿ繝ｭ繧ｰ邂｡逅・/button>
-        <button class="sidebar-nav-btn" data-tab="placeOrder"><i class="fa-solid fa-cart-plus"></i> 豕ｨ譁・☆繧・/button>
-        <button class="sidebar-nav-btn" data-tab="catalogEntries"><i class="fa-solid fa-list"></i> 繧ｫ繧ｿ繝ｭ繧ｰ繧ｨ繝ｳ繝医Μ</button>
-        <button class="sidebar-nav-btn" data-tab="orderEntries"><i class="fa-solid fa-file-invoice"></i> 豕ｨ譁・お繝ｳ繝医Μ</button>
-        <button class="sidebar-nav-btn" data-tab="reports"><i class="fa-solid fa-chart-bar"></i> 繝ｬ繝昴・繝・/button>
-        <button class="sidebar-nav-btn" data-tab="stockCalendar"><i class="fa-solid fa-calendar-days"></i> 繧ｫ繝ｬ繝ｳ繝繝ｼ</button>
-        <button class="sidebar-nav-btn" data-tab="analytics"><i class="fa-solid fa-chart-pie"></i> 繧｢繝翫Μ繝・ぅ繧ｯ繧ｹ</button>
-    </div>
-    <div class="sidebar-actions">
-        <button class="icon-btn" title="Search"><i class="fa-solid fa-magnifying-glass"></i></button>
-        <button class="icon-btn" title="Settings"><i class="fa-solid fa-gear"></i></button>
-        <button class="icon-btn" title="User"><i class="fa-solid fa-user"></i></button>
-    </div>
-</div>
-<div class="main-content-shell">
-    <div class="glass-topbar"></div>
-    <div class="glass-main-content">
-        <div class="glass-cards">
-            <div class="glass-card tab-section" id="tab-manageCatalog">
-                <h2>繧ｫ繧ｿ繝ｭ繧ｰ縺ｮ邂｡逅・/h2>
-                <form id="catalogEntryForm">
-                    <div class="form-row">
-                        <div class="form-group">
-                            <label for="CatalogName">繧ｫ繧ｿ繝ｭ繧ｰ蜷・/label>
-                            <select id="CatalogName" class="form-control" required>
-                                <option value="箴ｯ菴懈ｩ滓｢ｰ篆､豐ｹ蝨ｧ讖溷勣">箴ｯ菴懈ｩ滓｢ｰ篆､豐ｹ蝨ｧ讖溷勣</option>
-                                <option value="繝励Λ繧ｹ繝√ャ繧ｯ蜉箴ｯ讖滓｢ｰ篆､豐ｹ蝨ｧ讖溷勣">繝励Λ繧ｹ繝√ャ繧ｯ蜉箴ｯ讖滓｢ｰ篆､豐ｹ蝨ｧ讖溷勣</option>
-                                <option value="A3HG繧ｷ繝ｪ繝ｼ繧ｺ篝ｼ蝨ｧ蜿ｯ螟峨ヴ繧ｹ繝医Φ繝昴Φ繝・>A3HG繧ｷ繝ｪ繝ｼ繧ｺ篝ｼ蝨ｧ蜿ｯ螟峨ヴ繧ｹ繝医Φ繝昴Φ繝・/option>
-                                <option value="A3HM繧ｷ繝ｪ繝ｼ繧ｺ鬮伜悸蜿ｯ螟峨ヴ繧ｹ繝医Φ繝昴Φ繝・>A3HM繧ｷ繝ｪ繝ｼ繧ｺ鬮伜悸蜿ｯ螟峨ヴ繧ｹ繝医Φ繝昴Φ繝・/option>
-                                <option value="The ASR series Ultimate hydraulic control system">The ASR series Ultimate hydraulic control system</option>
-                                <option value="ASR繧ｷ繝ｪ繝ｼ繧ｺAC繧ｵ繝ｼ繝懊Δ繝ｼ繧ｿ鬧・虚繝昴Φ繝・>ASR繧ｷ繝ｪ繝ｼ繧ｺAC繧ｵ繝ｼ繝懊Δ繝ｼ繧ｿ鬧・虚繝昴Φ繝・/option>
-                                <option value="繝ｭ繧ｸ繝・け蠑・>繝ｭ繧ｸ繝・け蠑・/option>
-                                <option value="繧､繝ｳ繝ｩ繧､繝ｳ蠖｢繝励Ξ繝輔ぅ繝ｫ蠑・>繧､繝ｳ繝ｩ繧､繝ｳ蠖｢繝励Ξ繝輔ぅ繝ｫ蠑・/option>
-                                <option value="繧ｻ繝ｳ繧ｿDIN繧ｳ繝阪け繧ｿ蠖｢髮ｻ逎∝ｼ・>繧ｻ繝ｳ繧ｿDIN繧ｳ繝阪け繧ｿ蠖｢髮ｻ逎∝ｼ・/option>
-                                <option value="繝ｪ繝九Η繝ｼ繧｢繝ｫ繧｢繝ｳ繝玲政霈烏繧ｷ繝ｪ繝ｼ繧ｺ蜿ｯ螟峨す繝ｧ繝・け繝ｬ繧ｹ蠖｢髮ｻ逎∝・謠帛ｼ・>繝ｪ繝九Η繝ｼ繧｢繝ｫ繧｢繝ｳ繝玲政霈烏繧ｷ繝ｪ繝ｼ繧ｺ蜿ｯ螟峨す繝ｧ繝・け繝ｬ繧ｹ蠖｢髮ｻ逎∝・謠帛ｼ・/option>
-                                <option value="EH繧ｷ繝ｪ繝ｼ繧ｺ篆蝉ｾ矩崕逎∝ｼ丞宛蠕｡讖溷勣">EH繧ｷ繝ｪ繝ｼ繧ｺ篆蝉ｾ矩崕逎∝ｼ丞宛蠕｡讖溷勣</option>
-                                <option value="豈比ｾ矩崕逎∝ｼ上Ξ繝・Η繝ｼ繧ｷ繝ｳ繧ｰ繝｢繧ｸ繝･繝ｩ繝ｼ蠑√EMRP-01">豈比ｾ矩崕逎∝ｼ上Ξ繝・Η繝ｼ繧ｷ繝ｳ繧ｰ繝｢繧ｸ繝･繝ｩ繝ｼ蠑√EMRP-01</option>
-                                <option value="繧｢繝ｳ繝玲政霈牙ｽ｢豈比ｾ矩崕逎∝ｼ乗婿蜷代・豬・㍼蛻ｶ蠕｡蠑・荳ｻ蠑√ヵ繧｣繝ｼ繝峨ヰ繝・け蛻ｶ蠕｡莉倥″) ECDFHG-04EH/06EH">繧｢繝ｳ繝玲政霈牙ｽ｢豈比ｾ矩崕逎∝ｼ乗婿蜷代・豬・㍼蛻ｶ蠕｡蠑・荳ｻ蠑√ヵ繧｣繝ｼ繝峨ヰ繝・け蛻ｶ蠕｡莉倥″) ECDFHG-04EH/06EH</option>
-                                <option value="豈比ｾ矩崕逎∝ｼ乗婿蜷代・豬・㍼蛻ｶ蠕｡蠑√EDFHG-04/06">豈比ｾ矩崕逎∝ｼ乗婿蜷代・豬・㍼蛻ｶ蠕｡蠑√EDFHG-04/06</option>
-                                <option value="鬮倬溘Μ繝九い繧ｵ繝ｼ繝懷ｼ√す繝ｪ繝ｼ繧ｺ(繝ｪ繝ｼ繝輔Ξ繝・ヨ)">鬮倬溘Μ繝九い繧ｵ繝ｼ繝懷ｼ√す繝ｪ繝ｼ繧ｺ(繝ｪ繝ｼ繝輔Ξ繝・ヨ)</option>
-                                <option value="繝繝悶Ν繝｢繝ｼ繧ｿ逶ｴ蜍募ｽ｢繝ｪ繝九い繧ｵ繝ｼ繝懷ｼ・>繝繝悶Ν繝｢繝ｼ繧ｿ逶ｴ蜍募ｽ｢繝ｪ繝九い繧ｵ繝ｼ繝懷ｼ・/option>
-                                <option value="繝昴ず繧ｷ繝ｧ繝ｳ繧ｻ繝ｳ繧ｷ繝ｳ繧ｰ豐ｹ蝨ｧ繧ｷ繝ｪ繝ｳ繝">繝昴ず繧ｷ繝ｧ繝ｳ繧ｻ繝ｳ繧ｷ繝ｳ繧ｰ豐ｹ蝨ｧ繧ｷ繝ｪ繝ｳ繝</option>
-                                <option value="CHW蠖｢豐ｹ蝨ｧ繧ｷ繝ｪ繝ｳ繝">CHW蠖｢豐ｹ蝨ｧ繧ｷ繝ｪ繝ｳ繝</option>
-                                <option value="繝溘ル豐ｹ蝨ｧ繧ｷ繝ｪ繝ｳ繝">繝溘ル豐ｹ蝨ｧ繧ｷ繝ｪ繝ｳ繝</option>
-                                <option value="HE-YA繝代ャ繧ｯ">HE-YA繝代ャ繧ｯ</option>
-                                <option value="讓呎ｺ匁ｲｹ蝨ｧ繝ｦ繝九ャ繝・>讓呎ｺ匁ｲｹ蝨ｧ繝ｦ繝九ャ繝・/option>
-                                <option value="逵√お繝阪さ繝ｳ繝医Ο繝ｼ繝ｩ繧ｪ繝ｼ繝医メ繝･繝ｼ繝九Φ繧ｰ讖溯・莉倥″">逵√お繝阪さ繝ｳ繝医Ο繝ｼ繝ｩ繧ｪ繝ｼ繝医メ繝･繝ｼ繝九Φ繧ｰ讖溯・莉倥″</option>
-                                <option value="繧ｳ繝ｳ繧ｿ繝溘く繝・ヨ">繧ｳ繝ｳ繧ｿ繝溘く繝・ヨ</option>
-                                <option value="YB-32/50/65/80M 篝・虚繝槭Ν繝√さ繝ｳ繝代け繧ｿ">YB-32/50/65/80M 篝・虚繝槭Ν繝√さ繝ｳ繝代け繧ｿ</option>
-                                <option value="ASR繧ｷ繝ｪ繝ｼ繧ｺAC繧ｵ繝ｼ繝懊Δ繝ｼ繧ｿ鬧・虚繝昴Φ繝玲政霈俄ｾ・虚繝槭Ν繝√さ繝ｳ繝代け繧ｿ">ASR繧ｷ繝ｪ繝ｼ繧ｺAC繧ｵ繝ｼ繝懊Δ繝ｼ繧ｿ鬧・虚繝昴Φ繝玲政霈俄ｾ・虚繝槭Ν繝√さ繝ｳ繝代け繧ｿ</option>
-                                <option value="篝・虚PET繝懊ヨ繝ｫ貂帛ｮｹ讖・>篝・虚PET繝懊ヨ繝ｫ貂帛ｮｹ讖・/option>
-                                <option value="篝・虚蛻・ｱ大悸邵ｮ讖・縲後く繝ｪ繧ｳ縲搾ｼ医き繧ｿ繝ｭ繧ｰ・・>篝・虚蛻・ｱ大悸邵ｮ讖・縲後く繝ｪ繧ｳ縲搾ｼ医き繧ｿ繝ｭ繧ｰ・・/option>
-                                <option value="篝・虚蛻・ｱ大悸邵ｮ讖・縲後く繝ｪ繧ｳ縲搾ｼ医Μ繝ｼ繝輔Ξ繝・ヨ・・>篝・虚蛻・ｱ大悸邵ｮ讖・縲後く繝ｪ繧ｳ縲搾ｼ医Μ繝ｼ繝輔Ξ繝・ヨ・・/option>
-                                <option value="繝峨Λ繝篆ｸ繧ｳ繝ｳ繝代け繧ｿ">繝峨Λ繝篆ｸ繧ｳ繝ｳ繝代け繧ｿ</option>
-                                <option value="篆ｸ繧ｳ繝ｳ繝代け繧ｿ">篆ｸ繧ｳ繝ｳ繝代け繧ｿ</option>
-                                <option value="篆｣繧ｴ繝溷悸邵ｮ蛻・挨讖欹G繧ｷ繝ｪ繝ｼ繧ｺ">篆｣繧ｴ繝溷悸邵ｮ蛻・挨讖欹G繧ｷ繝ｪ繝ｼ繧ｺ</option>
-                                <option value="YB-5・ｭ繧ｷ繝ｪ繝ｼ繧ｺ繝槭Ν繝√さ繝ｳ繝代け繧ｿ">YB-5・ｭ繧ｷ繝ｪ繝ｼ繧ｺ繝槭Ν繝√さ繝ｳ繝代け繧ｿ</option>
-                            </select>
-                        </div>
-                        <div class="form-group">
-                            <label for="ReceiptDate">蜿鈴俶律</label>
-                            <input id="ReceiptDate" class="form-control" type="date" required>
-                        </div>
-                        <div class="form-group">
-                            <label for="QuantityReceived">蜿鈴俶焚驥・/label>
-                            <input id="QuantityReceived" class="form-control" type="number" min="0" required>
-                        </div>
-                        <div class="form-group">
-                            <label for="DeliveryDate">驟埼∵律</label>
-                            <input id="DeliveryDate" class="form-control" type="date" required>
-                        </div>
-                        <div class="form-group">
-                            <label for="IssueQuantity">逋ｺ陦梧焚驥・/label>
-                            <input id="IssueQuantity" class="form-control" type="number" min="0" required>
-                        </div>
-                        <div class="form-group">
-                            <label for="StockQuantity">蝨ｨ蠎ｫ謨ｰ驥・/label>
-                            <input id="StockQuantity" class="form-control" type="number" min="0" required>
-                        </div>
-                        <div class="form-group">
-                            <label for="DistributionDestination">驟榊ｸ・・</label>
-                            <input id="DistributionDestination" class="form-control" type="text" required>
-                        </div>
-                        <div class="form-group">
-                            <label for="Requester">萓晞ｼ閠・/label>
-                            <input id="Requester" class="form-control" type="text" required>
-                        </div>
-                        <div class="form-group">
-                            <label for="Remarks">蛯呵・/label>
-                            <input id="Remarks" class="form-control" type="text">
-                        </div>
-                    </div>
-                    <button type="button" class="btn btn-primary btn-lg btn-block" id="Insbtn">INSERT</button>
-                </form>
-                <div class="message text-center" id="message"></div>
+    <!-- TOP HEADER -->
+    <div class="top-header">
+        <div class="header-left">
+            <h1 class="app-title"><i class="fas fa-boxes"></i> InventHub</h1>
+        </div>
+        
+        <div class="header-center">
+            <div class="search-container">
+                <i class="fas fa-search"></i>
+                <input type="text" class="search-input" placeholder="在庫を検索...">
             </div>
-            <div class="glass-card tab-section" id="tab-placeOrder" style="display:none;">
-                <h2>豕ｨ譁・☆繧・/h2>
-                <form id="orderForm">
-                    <div class="form-row">
-                        <div class="form-group">
-                            <label for="OrderCatalogName">繧ｫ繧ｿ繝ｭ繧ｰ蜷・/label>
-                            <select id="OrderCatalogName" class="form-control" required>
-                                <option value="箴ｯ菴懈ｩ滓｢ｰ篆､豐ｹ蝨ｧ讖溷勣">箴ｯ菴懈ｩ滓｢ｰ篆､豐ｹ蝨ｧ讖溷勣</option>
-                                <option value="繝励Λ繧ｹ繝√ャ繧ｯ蜉箴ｯ讖滓｢ｰ篆､豐ｹ蝨ｧ讖溷勣">繝励Λ繧ｹ繝√ャ繧ｯ蜉箴ｯ讖滓｢ｰ篆､豐ｹ蝨ｧ讖溷勣</option>
-                                <option value="A3HG繧ｷ繝ｪ繝ｼ繧ｺ篝ｼ蝨ｧ蜿ｯ螟峨ヴ繧ｹ繝医Φ繝昴Φ繝・>A3HG繧ｷ繝ｪ繝ｼ繧ｺ篝ｼ蝨ｧ蜿ｯ螟峨ヴ繧ｹ繝医Φ繝昴Φ繝・/option>
-                                <option value="A3HM繧ｷ繝ｪ繝ｼ繧ｺ鬮伜悸蜿ｯ螟峨ヴ繧ｹ繝医Φ繝昴Φ繝・>A3HM繧ｷ繝ｪ繝ｼ繧ｺ鬮伜悸蜿ｯ螟峨ヴ繧ｹ繝医Φ繝昴Φ繝・/option>
-                                <option value="The ASR series Ultimate hydraulic control system">The ASR series Ultimate hydraulic control system</option>
-                                <option value="ASR繧ｷ繝ｪ繝ｼ繧ｺAC繧ｵ繝ｼ繝懊Δ繝ｼ繧ｿ鬧・虚繝昴Φ繝・>ASR繧ｷ繝ｪ繝ｼ繧ｺAC繧ｵ繝ｼ繝懊Δ繝ｼ繧ｿ鬧・虚繝昴Φ繝・/option>
-                                <option value="繝ｭ繧ｸ繝・け蠑・>繝ｭ繧ｸ繝・け蠑・/option>
-                                <option value="繧､繝ｳ繝ｩ繧､繝ｳ蠖｢繝励Ξ繝輔ぅ繝ｫ蠑・>繧､繝ｳ繝ｩ繧､繝ｳ蠖｢繝励Ξ繝輔ぅ繝ｫ蠑・/option>
-                                <option value="繧ｻ繝ｳ繧ｿDIN繧ｳ繝阪け繧ｿ蠖｢髮ｻ逎∝ｼ・>繧ｻ繝ｳ繧ｿDIN繧ｳ繝阪け繧ｿ蠖｢髮ｻ逎∝ｼ・/option>
-                                <option value="繝ｪ繝九Η繝ｼ繧｢繝ｫ繧｢繝ｳ繝玲政霈烏繧ｷ繝ｪ繝ｼ繧ｺ蜿ｯ螟峨す繝ｧ繝・け繝ｬ繧ｹ蠖｢髮ｻ逎∝・謠帛ｼ・>繝ｪ繝九Η繝ｼ繧｢繝ｫ繧｢繝ｳ繝玲政霈烏繧ｷ繝ｪ繝ｼ繧ｺ蜿ｯ螟峨す繝ｧ繝・け繝ｬ繧ｹ蠖｢髮ｻ逎∝・謠帛ｼ・/option>
-                                <option value="EH繧ｷ繝ｪ繝ｼ繧ｺ篆蝉ｾ矩崕逎∝ｼ丞宛蠕｡讖溷勣">EH繧ｷ繝ｪ繝ｼ繧ｺ篆蝉ｾ矩崕逎∝ｼ丞宛蠕｡讖溷勣</option>
-                                <option value="豈比ｾ矩崕逎∝ｼ上Ξ繝・Η繝ｼ繧ｷ繝ｳ繧ｰ繝｢繧ｸ繝･繝ｩ繝ｼ蠑√EMRP-01">豈比ｾ矩崕逎∝ｼ上Ξ繝・Η繝ｼ繧ｷ繝ｳ繧ｰ繝｢繧ｸ繝･繝ｩ繝ｼ蠑√EMRP-01</option>
-                                <option value="繧｢繝ｳ繝玲政霈牙ｽ｢豈比ｾ矩崕逎∝ｼ乗婿蜷代・豬・㍼蛻ｶ蠕｡蠑・荳ｻ蠑√ヵ繧｣繝ｼ繝峨ヰ繝・け蛻ｶ蠕｡莉倥″) ECDFHG-04EH/06EH">繧｢繝ｳ繝玲政霈牙ｽ｢豈比ｾ矩崕逎∝ｼ乗婿蜷代・豬・㍼蛻ｶ蠕｡蠑・荳ｻ蠑√ヵ繧｣繝ｼ繝峨ヰ繝・け蛻ｶ蠕｡莉倥″) ECDFHG-04EH/06EH</option>
-                                <option value="豈比ｾ矩崕逎∝ｼ乗婿蜷代・豬・㍼蛻ｶ蠕｡蠑√EDFHG-04/06">豈比ｾ矩崕逎∝ｼ乗婿蜷代・豬・㍼蛻ｶ蠕｡蠑√EDFHG-04/06</option>
-                                <option value="鬮倬溘Μ繝九い繧ｵ繝ｼ繝懷ｼ√す繝ｪ繝ｼ繧ｺ(繝ｪ繝ｼ繝輔Ξ繝・ヨ)">鬮倬溘Μ繝九い繧ｵ繝ｼ繝懷ｼ√す繝ｪ繝ｼ繧ｺ(繝ｪ繝ｼ繝輔Ξ繝・ヨ)</option>
-                                <option value="繝繝悶Ν繝｢繝ｼ繧ｿ逶ｴ蜍募ｽ｢繝ｪ繝九い繧ｵ繝ｼ繝懷ｼ・>繝繝悶Ν繝｢繝ｼ繧ｿ逶ｴ蜍募ｽ｢繝ｪ繝九い繧ｵ繝ｼ繝懷ｼ・/option>
-                                <option value="繝昴ず繧ｷ繝ｧ繝ｳ繧ｻ繝ｳ繧ｷ繝ｳ繧ｰ豐ｹ蝨ｧ繧ｷ繝ｪ繝ｳ繝">繝昴ず繧ｷ繝ｧ繝ｳ繧ｻ繝ｳ繧ｷ繝ｳ繧ｰ豐ｹ蝨ｧ繧ｷ繝ｪ繝ｳ繝</option>
-                                <option value="CHW蠖｢豐ｹ蝨ｧ繧ｷ繝ｪ繝ｳ繝">CHW蠖｢豐ｹ蝨ｧ繧ｷ繝ｪ繝ｳ繝</option>
-                                <option value="繝溘ル豐ｹ蝨ｧ繧ｷ繝ｪ繝ｳ繝">繝溘ル豐ｹ蝨ｧ繧ｷ繝ｪ繝ｳ繝</option>
-                                <option value="HE-YA繝代ャ繧ｯ">HE-YA繝代ャ繧ｯ</option>
-                                <option value="讓呎ｺ匁ｲｹ蝨ｧ繝ｦ繝九ャ繝・>讓呎ｺ匁ｲｹ蝨ｧ繝ｦ繝九ャ繝・/option>
-                                <option value="逵√お繝阪さ繝ｳ繝医Ο繝ｼ繝ｩ繧ｪ繝ｼ繝医メ繝･繝ｼ繝九Φ繧ｰ讖溯・莉倥″">逵√お繝阪さ繝ｳ繝医Ο繝ｼ繝ｩ繧ｪ繝ｼ繝医メ繝･繝ｼ繝九Φ繧ｰ讖溯・莉倥″</option>
-                                <option value="繧ｳ繝ｳ繧ｿ繝溘く繝・ヨ">繧ｳ繝ｳ繧ｿ繝溘く繝・ヨ</option>
-                                <option value="YB-32/50/65/80M 篝・虚繝槭Ν繝√さ繝ｳ繝代け繧ｿ">YB-32/50/65/80M 篝・虚繝槭Ν繝√さ繝ｳ繝代け繧ｿ</option>
-                                <option value="ASR繧ｷ繝ｪ繝ｼ繧ｺAC繧ｵ繝ｼ繝懊Δ繝ｼ繧ｿ鬧・虚繝昴Φ繝玲政霈俄ｾ・虚繝槭Ν繝√さ繝ｳ繝代け繧ｿ">ASR繧ｷ繝ｪ繝ｼ繧ｺAC繧ｵ繝ｼ繝懊Δ繝ｼ繧ｿ鬧・虚繝昴Φ繝玲政霈俄ｾ・虚繝槭Ν繝√さ繝ｳ繝代け繧ｿ</option>
-                                <option value="篝・虚PET繝懊ヨ繝ｫ貂帛ｮｹ讖・>篝・虚PET繝懊ヨ繝ｫ貂帛ｮｹ讖・/option>
-                                <option value="篝・虚蛻・ｱ大悸邵ｮ讖・縲後く繝ｪ繧ｳ縲搾ｼ医き繧ｿ繝ｭ繧ｰ・・>篝・虚蛻・ｱ大悸邵ｮ讖・縲後く繝ｪ繧ｳ縲搾ｼ医き繧ｿ繝ｭ繧ｰ・・/option>
-                                <option value="篝・虚蛻・ｱ大悸邵ｮ讖・縲後く繝ｪ繧ｳ縲搾ｼ医Μ繝ｼ繝輔Ξ繝・ヨ・・>篝・虚蛻・ｱ大悸邵ｮ讖・縲後く繝ｪ繧ｳ縲搾ｼ医Μ繝ｼ繝輔Ξ繝・ヨ・・/option>
-                                <option value="繝峨Λ繝篆ｸ繧ｳ繝ｳ繝代け繧ｿ">繝峨Λ繝篆ｸ繧ｳ繝ｳ繝代け繧ｿ</option>
-                                <option value="篆ｸ繧ｳ繝ｳ繝代け繧ｿ">篆ｸ繧ｳ繝ｳ繝代け繧ｿ</option>
-                                <option value="篆｣繧ｴ繝溷悸邵ｮ蛻・挨讖欹G繧ｷ繝ｪ繝ｼ繧ｺ">篆｣繧ｴ繝溷悸邵ｮ蛻・挨讖欹G繧ｷ繝ｪ繝ｼ繧ｺ</option>
-                                <option value="YB-5・ｭ繧ｷ繝ｪ繝ｼ繧ｺ繝槭Ν繝√さ繝ｳ繝代け繧ｿ">YB-5・ｭ繧ｷ繝ｪ繝ｼ繧ｺ繝槭Ν繝√さ繝ｳ繝代け繧ｿ</option>
-                            </select>
-                        </div>
-                        <div class="form-group">
-                            <label for="OrderQuantity">豕ｨ譁・焚驥・/label>
-                            <input id="OrderQuantity" class="form-control" type="number" min="1" required>
-                        </div>
-                        <div class="form-group">
-                            <label for="OrderRequester">萓晞ｼ閠・/label>
-                            <input id="OrderRequester" class="form-control" type="text" required>
-                        </div>
-                    </div>
-                    <div class="form-group" style="width:100%;margin-top:12px;">
-                        <label for="OrderMessage" style="font-weight:600;">豕ｨ譁・Γ繝・そ繝ｼ繧ｸ (繝ｪ繝・メ繝・く繧ｹ繝亥庄)</label>
-                        <div id="orderMessageToolbar" style="margin-bottom:6px;">
-                            <button type="button" class="btn btn-light btn-sm" title="螟ｪ蟄・(Bold)" onclick="formatOrderMsg('bold')"><b>B</b></button>
-                            <button type="button" class="btn btn-light btn-sm" title="譁應ｽ・(Italic)" onclick="formatOrderMsg('italic')"><i>I</i></button>
-                            <button type="button" class="btn btn-light btn-sm" title="荳狗ｷ・(Underline)" onclick="formatOrderMsg('underline')"><u>U</u></button>
-                            <button type="button" class="btn btn-light btn-sm" title="濶ｲ (Color)" onclick="formatOrderMsgColor()"><span style='color:#e74c3c;'>A</span></button>
-                            <button type="button" class="btn btn-light btn-sm" title="繝輔か繝ｳ繝医し繧､繧ｺ (Font Size)" onclick="formatOrderMsgFontSize()">A<span style='font-size:0.8em;'>竊・/span></button>
-                            <button type="button" class="btn btn-light btn-sm" title="繧､繝ｳ繝・Φ繝・(Indent)" onclick="formatOrderMsg('indent')">竊・/button>
-                            <button type="button" class="btn btn-light btn-sm" title="繧､繝ｳ繝・Φ繝郁ｧ｣髯､ (Outdent)" onclick="formatOrderMsg('outdent')">竊・/button>
-                        </div>
-                        <div id="OrderMessage" contenteditable="true" style="min-height:90px;border:1.5px solid #e0eafc;border-radius:10px;padding:10px;background:#fff;font-size:1rem;outline:none;white-space:pre-wrap;overflow:auto;"></div>
-                        <small class="form-text text-muted">螟ｪ蟄励・濶ｲ繝ｻ繝輔か繝ｳ繝医・繧､繝ｳ繝・Φ繝育ｭ峨√Μ繝・メ繝・く繧ｹ繝医〒險伜・縺ｧ縺阪∪縺吶・/small>
-                    </div>
-                    <button type="button" class="btn btn-primary btn-lg btn-block" id="OrderBtn">豕ｨ譁・☆繧・/button>
-                </form>
-                <div class="message text-center" id="orderMessage"></div>
-            </div>
-            <div class="glass-card tab-section" id="tab-catalogEntries" style="display:none;">
-                <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 12px;">
-                  <h2 style="margin-bottom: 0;">繧ｫ繧ｿ繝ｭ繧ｰ繧ｨ繝ｳ繝医Μ</h2>
-                  <div>
-                    <button class="btn btn-danger btn-sm" id="deleteAllCatalogBtn" style="margin-right:8px;">蜈ｨ繝・・繧ｿ蜑企勁</button>
-                    <button class="btn btn-secondary btn-sm" id="generateSampleCatalogBtn">繧ｵ繝ｳ繝励Ν繝・・繧ｿ逕滓・</button>
-                  </div>
+        </div>
+        
+        <div class="header-right">
+            <button class="notification-btn">
+                <i class="fas fa-bell"></i>
+                <span class="notification-badge">3</span>
+            </button>
+            <div class="user-menu">
+                <img src="https://via.placeholder.com/40" alt="User" class="user-avatar">
+                <div class="user-dropdown">
+                    <a href="#"><i class="fas fa-user"></i> プロフィール</a>
+                    <a href="#"><i class="fas fa-cog"></i> 設定</a>
+                    <a href="#"><i class="fas fa-sign-out-alt"></i> ログアウト</a>
                 </div>
-                <div id="catalogEntriesAccordion"></div>
-                <!-- Sample data script moved to main script -->
-            </div>
-            <div class="glass-card tab-section" id="tab-orderEntries" style="display:none;">
-                <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 12px;">
-                  <h2 style="margin-bottom: 0;">豕ｨ譁・お繝ｳ繝医Μ</h2>
-                  <div>
-                    <button class="btn btn-danger btn-sm" id="deleteAllOrderBtn" style="margin-right:8px;">蜈ｨ繝・・繧ｿ蜑企勁</button>
-                    <button class="btn btn-secondary btn-sm" id="generateSampleOrderBtn">繧ｵ繝ｳ繝励Ν繝・・繧ｿ逕滓・</button>
-                  </div>
-                </div>
-                <div id="orderEntriesAccordion"></div>
-            </div>
-            <div class="glass-card tab-section" id="tab-reports" style="display:none;">
-                <h2>繝ｬ繝昴・繝・/h2>
-                <canvas id="stockChart"></canvas>
-            </div>
-            <div class="glass-card tab-section" id="tab-stockCalendar" style="display:none;">
-                <h2>繧ｫ繝ｬ繝ｳ繝繝ｼ</h2>
-                <div id="stockCalendarContent"></div>
-            </div>
-            <div class="glass-card tab-section" id="tab-analytics" style="display:none;">
-                <!-- Add Date Range Filter UI to Analytics Tab -->
-                <div class="glass-card" style="margin-bottom:18px;" id="analyticsDateRangeCard">
-                  <form id="analyticsDateRangeForm" style="display:flex;align-items:center;gap:16px;">
-                    <label style="margin-bottom:0;font-weight:500;">譛滄俣:</label>
-                    <select id="analyticsDatePreset" class="form-control" style="width:auto;">
-                      <option value="7">逶ｴ霑・譌･髢・/option>
-                      <option value="30" selected>逶ｴ霑・0譌･髢・/option>
-                      <option value="90">逶ｴ霑・0譌･髢・/option>
-                      <option value="custom">繧ｫ繧ｹ繧ｿ繝</option>
-                    </select>
-                    <input type="date" id="analyticsDateStart" class="form-control" style="width:auto;display:none;">
-                    <span id="analyticsDateDash" style="display:none;">・・/span>
-                    <input type="date" id="analyticsDateEnd" class="form-control" style="width:auto;display:none;">
-                  </form>
-                </div>
-                <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 18px;">
-                  <h2 style="margin-bottom: 0;">繧｢繝翫Μ繝・ぅ繧ｯ繧ｹ</h2>
-                  <button class="btn btn-primary" id="customizeAnalyticsBtn"><i class="fa-solid fa-sliders"></i> 繧ｫ繧ｹ繧ｿ繝槭う繧ｺ</button>
-                </div>
-                <div id="analyticsCards" class="glass-cards"></div>
             </div>
         </div>
     </div>
-</div>
-<!-- Analytics Customization Modal -->
-<div class="modal fade" id="analyticsCustomizeModal" tabindex="-1" role="dialog" aria-labelledby="analyticsCustomizeModalLabel" aria-hidden="true">
-  <div class="modal-dialog" role="document">
-    <div class="modal-content" style="border-radius: 18px;">
-      <div class="modal-header">
-        <h5 class="modal-title" id="analyticsCustomizeModalLabel">繧｢繝翫Μ繝・ぅ繧ｯ繧ｹ繧ｫ繝ｼ繝峨・繧ｫ繧ｹ繧ｿ繝槭う繧ｺ</h5>
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-          <span aria-hidden="true">&times;</span>
-        </button>
-      </div>
-      <div class="modal-body">
-        <form id="analyticsCustomizeForm">
-          <div class="form-check">
-            <input class="form-check-input" type="checkbox" value="totalStock" id="chkTotalStock">
-            <label class="form-check-label" for="chkTotalStock">邱丞惠蠎ｫ謨ｰ</label>
-          </div>
-          <div class="form-check">
-            <input class="form-check-input" type="checkbox" value="stockByItem" id="chkStockByItem">
-            <label class="form-check-label" for="chkStockByItem">繧ｫ繧ｿ繝ｭ繧ｰ蛻･蝨ｨ蠎ｫ</label>
-          </div>
-          <div class="form-check">
-            <input class="form-check-input" type="checkbox" value="avgStock" id="chkAvgStock">
-            <label class="form-check-label" for="chkAvgStock">蟷ｳ蝮・惠蠎ｫ繝ｬ繝吶Ν</label>
-          </div>
-          <div class="form-check">
-            <input class="form-check-input" type="checkbox" value="stockTrend" id="chkStockTrend">
-            <label class="form-check-label" for="chkStockTrend">蝨ｨ蠎ｫ繝医Ξ繝ｳ繝・/label>
-          </div>
-          <div class="form-check">
-            <input class="form-check-input" type="checkbox" value="stockMovement" id="chkStockMovement">
-            <label class="form-check-label" for="chkStockMovement">蜿鈴・vs 逋ｺ陦・/label>
-          </div>
-          <div class="form-check">
-            <input class="form-check-input" type="checkbox" value="lowStock" id="chkLowStock">
-            <label class="form-check-label" for="chkLowStock">隕∝・逋ｺ豕ｨ繧｢繧､繝・Β</label>
-          </div>
-          <div class="form-check">
-            <input class="form-check-input" type="checkbox" value="stockoutRate" id="chkStockoutRate">
-            <label class="form-check-label" for="chkStockoutRate">蝨ｨ蠎ｫ蛻・ｌ邇・/label>
-          </div>
-          <div class="form-check">
-            <input class="form-check-input" type="checkbox" value="totalOrders" id="chkTotalOrders">
-            <label class="form-check-label" for="chkTotalOrders">邱乗ｳｨ譁・焚</label>
-          </div>
-          <div class="form-check">
-            <input class="form-check-input" type="checkbox" value="totalQtyOrdered" id="chkTotalQtyOrdered">
-            <label class="form-check-label" for="chkTotalQtyOrdered">邱乗ｳｨ譁・焚驥・/label>
-          </div>
-          <div class="form-check">
-            <input class="form-check-input" type="checkbox" value="ordersByItem" id="chkOrdersByItem">
-            <label class="form-check-label" for="chkOrdersByItem">繧ｫ繧ｿ繝ｭ繧ｰ蛻･豕ｨ譁・/label>
-          </div>
-          <div class="form-check">
-            <input class="form-check-input" type="checkbox" value="orderTrend" id="chkOrderTrend">
-            <label class="form-check-label" for="chkOrderTrend">豕ｨ譁・ヨ繝ｬ繝ｳ繝・/label>
-          </div>
-          <div class="form-check">
-            <input class="form-check-input" type="checkbox" value="ordersByRequester" id="chkOrdersByRequester">
-            <label class="form-check-label" for="chkOrdersByRequester">萓晞ｼ閠・挨豕ｨ譁・/label>
-          </div>
-          <div class="form-check">
-            <input class="form-check-input" type="checkbox" value="avgOrderQty" id="chkAvgOrderQty">
-            <label class="form-check-label" for="chkAvgOrderQty">蟷ｳ蝮・ｳｨ譁・焚驥・/label>
-          </div>
-          <div class="form-check">
-            <input class="form-check-input" type="checkbox" value="topIssued" id="chkTopIssued">
-            <label class="form-check-label" for="chkTopIssued">逋ｺ陦梧焚繝医ャ繝・/label>
-          </div>
-          <div class="form-check">
-            <input class="form-check-input" type="checkbox" value="topOrdered" id="chkTopOrdered">
-            <label class="form-check-label" for="chkTopOrdered">豕ｨ譁・焚繝医ャ繝・/label>
-          </div>
-          <div class="form-check">
-            <input class="form-check-input" type="checkbox" value="leastPopular" id="chkLeastPopular">
-            <label class="form-check-label" for="chkLeastPopular">荳堺ｺｺ豌励き繧ｿ繝ｭ繧ｰ</label>
-          </div>
-        </form>
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-dismiss="modal">髢峨§繧・/button>
-        <button type="button" class="btn btn-primary" id="saveAnalyticsCustomize">菫晏ｭ・/button>
-      </div>
+
+    <!-- MAIN CONTAINER -->
+    <div class="main-container">
+        <!-- LEFT SIDEBAR -->
+        <div class="left-sidebar">
+            <div class="sidebar-section">
+                <h3 class="sidebar-title">ナビゲーション</h3>
+                <button class="category-btn active" data-tab="manageCatalog">
+                    <i class="fas fa-plus-circle"></i> カタログ管理
+                </button>
+                <button class="category-btn" data-tab="placeOrder">
+                    <i class="fas fa-shopping-cart"></i> 注文する
+                </button>
+                <button class="category-btn" data-tab="catalogEntries">
+                    <i class="fas fa-list"></i> カタログエントリ
+                </button>
+                <button class="category-btn" data-tab="orderEntries">
+                    <i class="fas fa-receipt"></i> 注文エントリ
+                </button>
+                <button class="category-btn" data-tab="stockCalendar">
+                    <i class="fas fa-calendar"></i> カレンダー
+                </button>
+                <button class="category-btn" data-tab="analytics">
+                    <i class="fas fa-chart-bar"></i> 分析
+                </button>
+            </div>
+        </div>
+
+        <!-- CENTER CONTENT -->
+        <div class="center-content">
+            <!-- MANAGE CATALOG TAB -->
+            <div id="tab-manageCatalog" class="content-section" style="display: block;">
+                <div class="content-header">
+                    <h2>カタログ管理</h2>
+                </div>
+
+                <div class="form-card">
+                    <h3>カタログに追加</h3>
+                    <form id="catalogEntryForm">
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="CatalogName">カタログ名 *</label>
+                                <select id="CatalogName" class="modern-input" required>
+                                    <option value="">選択...</option>
+                                    <option value="箴ｯ菴懈ｩ滓｢ｰ篆､豐ｹ蝨ｧ讖溷勣">箴ｯ菴懈ｩ滓｢ｰ篆､豐ｹ蝨ｧ讖溷勣</option>
+                                    <option value="繝励Λ繧ｹ繝√ャ繧ｯ蜉箴ｯ讖滓｢ｰ篆､豐ｹ蝨ｧ讖溷勣">繝励Λ繧ｹ繝√ャ繧ｯ蜉箴ｯ讖滓｢ｰ篆､豐ｹ蝨ｧ讖溷勣</option>
+                                    <option value="A3HG繧ｷ繝ｪ繝ｼ繧ｺ篝ｼ蝨ｧ蜿ｯ螟峨ヴ繧ｹ繝医Φ繝昴Φ繝・">A3HG繧ｷ繝ｪ繝ｼ繧ｺ篝ｼ蝨ｧ蜿ｯ螟峨ヴ繧ｹ繝医Φ繝昴Φ繝・</option>
+                                    <option value="A3HM繧ｷ繝ｪ繝ｼ繧ｺ鬮伜悸蜿ｯ螟峨ヴ繧ｹ繝医Φ繝昴Φ繝・">A3HM繧ｷ繝ｪ繝ｼ繧ｺ鬮伜悸蜿ｯ螟峨ヴ繧ｹ繝医Φ繝昴Φ繝・</option>
+                                    <option value="The ASR series Ultimate hydraulic control system">The ASR series Ultimate hydraulic control system</option>
+                                    <option value="ASR繧ｷ繝ｪ繝ｼ繧ｺAC繧ｵ繝ｼ繝懊Δ繝ｼ繧ｿ鬧・虚繝昴Φ繝・">ASR繧ｷ繝ｪ繝ｼ繧ｺAC繧ｵ繝ｼ繝懊Δ繝ｼ繧ｿ鬧・虚繝昴Φ繝・</option>
+                                    <option value="繝ｭ繧ｸ繝・け蠑・">繝ｭ繧ｸ繝・け蠑・</option>
+                                    <option value="繧､繝ｳ繝ｩ繧､繝ｳ蠖｢繝励Ξ繝輔ぅ繝ｫ蠑・">繧､繝ｳ繝ｩ繧､繝ｳ蠖｢繝励Ξ繝輔ぅ繝ｫ蠑・</option>
+                                    <option value="繧ｻ繝ｳ繧ｿDIN繧ｳ繝阪け繧ｿ蠖｢髮ｻ逎∝ｼ・">繧ｻ繝ｳ繧ｿDIN繧ｳ繝阪け繧ｿ蠖｢髮ｻ逎∝ｼ・</option>
+                                    <option value="繝ｪ繝九Η繝ｼ繧｢繝ｫ繧｢繝ｳ繝玲政霈烏繧ｷ繝ｪ繝ｼ繧ｺ蜿ｯ螟峨す繝ｧ繝・け繝ｬ繧ｹ蠖｢髮ｻ逎∝・謠帛ｼ・">繝ｪ繝九Η繝ｼ繧｢繝ｫ繧｢繝ｳ繝玲政霈烏繧ｷ繝ｪ繝ｼ繧ｺ蜿ｯ螟峨す繝ｧ繝・け繝ｬ繧ｹ蠖｢髮ｻ逎∝・謠帛ｼ・</option>
+                                    <option value="EH繧ｷ繝ｪ繝ｼ繧ｺ篆蝉ｾ矩崕逎∝ｼ丞宛蠕｡讖溷勣">EH繧ｼ繝ｪ繝ｼ繧ｺ篆蝉ｾ矩崕逎∝ｼ丞宛蠕｡讖溷勣</option>
+                                    <option value="豈比ｾ矩崕逎∝ｼ上Ξ繝・Η繝ｼ繧ｷ繝ｳ繧ｰ繝｢繧ｸ繝･繝ｩ繝ｼ蠑√EMRP-01">豈比ｾ矩崕逎∝ｼ上Ξ繝・Η繝ｼ繧ｷ繝ｳ繧ｰ繝｢繧ｸ繝･繝ｩ繝ｼ蠑√EMRP-01</option>
+                                    <option value="YB-32/50/65/80M 篝・虚繝槭Ν繝√さ繝ｳ繝代け繧ｿ">YB-32/50/65/80M 篝・虚繝槭Ν繝√さ繝ｳ繝代け繧ｿ</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="ReceiptDate">受け取り日</label>
+                                <input id="ReceiptDate" class="modern-input" type="date" required>
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="QuantityReceived">受け取り数量 *</label>
+                                <input id="QuantityReceived" class="modern-input" type="number" min="0" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="DeliveryDate">配送日</label>
+                                <input id="DeliveryDate" class="modern-input" type="date" required>
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="IssueQuantity">発行数量 *</label>
+                                <input id="IssueQuantity" class="modern-input" type="number" min="0" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="StockQuantity">現在の在庫 *</label>
+                                <input id="StockQuantity" class="modern-input" type="number" min="0" required>
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="DistributionDestination">配送先</label>
+                                <input id="DistributionDestination" class="modern-input" type="text" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="Requester">申請者 *</label>
+                                <input id="Requester" class="modern-input" type="text" required>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="Remarks">備考</label>
+                            <input id="Remarks" class="modern-input" type="text">
+                        </div>
+                        <button type="submit" class="btn-submit" id="Insbtn">
+                            <i class="fas fa-check"></i> カタログに追加
+                        </button>
+                    </form>
+                    <div class="message" id="message"></div>
+                </div>
+            </div>
+
+            <!-- PLACE ORDER TAB -->
+            <div id="tab-placeOrder" class="content-section" style="display: none;">
+                <div class="content-header">
+                    <h2>注文を作成</h2>
+                </div>
+
+                <div class="form-card">
+                    <h3>新しい注文</h3>
+                    <form id="orderForm">
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="OrderCatalogName">カタログ名 *</label>
+                                <select id="OrderCatalogName" class="modern-input" required>
+                                    <option value="">選択...</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="OrderQuantity">注文数量 *</label>
+                                <input id="OrderQuantity" class="modern-input" type="number" min="1" required>
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="OrderRequester">申請者 *</label>
+                                <input id="OrderRequester" class="modern-input" type="text" required>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="OrderMessage">注文メッセージ</label>
+                            <textarea id="OrderMessage" class="modern-input" rows="3" placeholder="メモ..."></textarea>
+                        </div>
+                        <button type="submit" class="btn-submit" id="OrderBtn">
+                            <i class="fas fa-shopping-cart"></i> 注文を送信
+                        </button>
+                    </form>
+                    <div class="message" id="orderMessage"></div>
+                </div>
+            </div>
+
+            <!-- CATALOG ENTRIES TAB -->
+            <div id="tab-catalogEntries" class="content-section" style="display: none;">
+                <div class="content-header">
+                    <h2>カタログエントリ</h2>
+                    <div>
+                        <button class="btn btn-danger" id="deleteAllCatalogBtn" style="margin-right:8px;">
+                            <i class="fas fa-trash"></i> すべて削除
+                        </button>
+                        <button class="btn btn-secondary" id="generateSampleCatalogBtn">
+                            <i class="fas fa-database"></i> サンプルデータ
+                        </button>
+                    </div>
+                </div>
+
+                <div class="table-responsive">
+                    <table class="modern-table">
+                        <thead>
+                            <tr>
+                                <th>カタログ名</th>
+                                <th>受取数</th>
+                                <th>発行数</th>
+                                <th>現在在庫</th>
+                                <th>申請者</th>
+                                <th>操作</th>
+                            </tr>
+                        </thead>
+                        <tbody id="catalogEntriesAccordion">
+                            <!-- Entries will be populated here -->
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <!-- ORDER ENTRIES TAB -->
+            <div id="tab-orderEntries" class="content-section" style="display: none;">
+                <div class="content-header">
+                    <h2>注文エントリ</h2>
+                    <div>
+                        <button class="btn btn-danger" id="deleteAllOrderBtn" style="margin-right:8px;">
+                            <i class="fas fa-trash"></i> すべて削除
+                        </button>
+                        <button class="btn btn-secondary" id="generateSampleOrderBtn">
+                            <i class="fas fa-database"></i> サンプルデータ
+                        </button>
+                    </div>
+                </div>
+
+                <div class="table-responsive">
+                    <table class="modern-table">
+                        <thead>
+                            <tr>
+                                <th>カタログ名</th>
+                                <th>数量</th>
+                                <th>申請者</th>
+                                <th>メッセージ</th>
+                                <th>日時</th>
+                                <th>操作</th>
+                            </tr>
+                        </thead>
+                        <tbody id="orderEntriesAccordion">
+                            <!-- Entries will be populated here -->
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <!-- CALENDAR TAB -->
+            <div id="tab-stockCalendar" class="content-section" style="display: none;">
+                <div class="content-header">
+                    <h2>カレンダー</h2>
+                </div>
+                <div id="stockCalendarContent"></div>
+            </div>
+
+            <!-- ANALYTICS TAB -->
+            <div id="tab-analytics" class="content-section" style="display: none;">
+                <div class="content-header">
+                    <h2>分析</h2>
+                    <button class="btn-primary" id="customizeAnalyticsBtn">
+                        <i class="fas fa-sliders"></i> カスタマイズ
+                    </button>
+                </div>
+
+                <div class="analytics-grid" id="analyticsCards">
+                    <!-- Analytics cards will be populated here -->
+                </div>
+            </div>
+        </div>
+
+        <!-- RIGHT SIDEBAR -->
+        <div class="right-sidebar">
+            <div class="stats-card">
+                <div class="stat-item">
+                    <div class="stat-label">総在庫数</div>
+                    <div class="stat-value" id="totalInventory">0</div>
+                </div>
+            </div>
+
+            <div class="stats-card">
+                <div class="stat-item">
+                    <div class="stat-label">低在庫アイテム</div>
+                    <div class="stat-value" id="lowStockCount">0</div>
+                </div>
+            </div>
+
+            <div class="stats-card">
+                <div class="stat-item">
+                    <div class="stat-label">最近の注文</div>
+                    <div class="stat-value" id="recentOrders">0</div>
+                </div>
+            </div>
+
+            <div class="activity-card">
+                <h3>最近のアクティビティ</h3>
+                <div id="activityFeed">
+                    <p class="empty-state">アクティビティなし</p>
+                </div>
+            </div>
+        </div>
     </div>
-  </div>
-</div>
-<script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-<script type="module" src="js/main.js"></script>
+
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.2/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Chart.js -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@3.9.1/dist/chart.min.js"></script>
+    <!-- FullCalendar -->
+    <script src='https://cdn.jsdelivr.net/npm/fullcalendar@5.11.0/index.global.min.js'></script>
+    <!-- Firebase -->
+    <script src="https://www.gstatic.com/firebasejs/10.5.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.5.0/firebase-database.js"></script>
+    
+    <!-- Main JS -->
+    <script type="module" src="js/main.js"></script>
 </body>
 </html>

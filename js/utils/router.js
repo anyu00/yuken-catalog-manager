@@ -59,7 +59,7 @@ export class Router {
             return;
         }
 
-        const path = this.getPathFromTab(tabName);
+        const path = this.getPathFromTab(tabName); 
         console.log('🔗 Navigating to path:', path, '(tab:', tabName + ')');
         window.history.pushState({ tab: tabName }, '', path);
 
@@ -96,7 +96,7 @@ export class Router {
             tabEl.style.display = '';
         } else {
             console.warn('   ⚠️ No tab element found: #tab-' + tabName);
-        }
+        } 
 
         // Initialize page module
         if (this.pages[tabName] && this.pages[tabName].init) {
@@ -112,7 +112,7 @@ export class Router {
         } else {
             console.warn('   ⚠️ No init function for tab:', tabName);
         }
-    }
+    }   
 
     // Listen for route changes
     onChange(callback) {
@@ -123,7 +123,7 @@ export class Router {
         this.listeners.forEach(callback => callback(tabName));
     }
 
-    // Initialize router and handle browser back/forward
+    // Initialize router and handle browser back/forward 
     init() {
         console.log('🔧 Router initialized');
         console.log('📍 Current path:', window.location.pathname);

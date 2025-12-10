@@ -61,7 +61,7 @@ Yuken Catalog Manager/
   - Top issued/ordered catalogs
   - Catalog comparison charts
 
-### 4. **Real-time Data Management**
+### 4. **Real-time Data Management**  
 - Inline editing of table cells
 - Automatic sync with Firebase
 - Delete functionality for entries
@@ -81,7 +81,7 @@ Yuken Catalog Manager/
 - JavaScript ES6+ (Modules)
 - jQuery for DOM manipulation
 - Bootstrap 4.5.2 for responsive layout
-- Font Awesome 6.4.2 for icons
+- Font Awesome 6.4.2 for icons ( advanced analytics: sections are not )
 
 **Data Visualization:**
 - Chart.js for dynamic charts
@@ -97,7 +97,7 @@ Yuken Catalog Manager/
 - Modern web browser (Chrome, Firefox, Safari, Edge)
 - No build process required - uses ES6 modules natively
 
-### Steps
+### Steps (there are 8 steps and one of the steps is mentioned as a newsection)
 1. Clone this repository:
    ```bash
    git clone <repository-url>

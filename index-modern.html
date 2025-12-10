@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>カタログ管理ダッシュボード</title>
+    
+    <!-- Fonts & Icons -->
+    <link href="https://fonts.googleapis.com/css?family=Inter:400,500,600,700&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" rel="stylesheet">
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/fullcalendar@5.11.0/main.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/fullcalendar@5.11.0/main.min.js"></script>
+    
+    <link rel="stylesheet" href="css/styles-modern.css">
+</head>
+<body>
+    <!-- TOP HEADER -->
+    <div class="top-header">
+        <div class="header-left">
+            <h1 class="app-title"><i class="fa-solid fa-box"></i> InventHub</h1>
+            <p class="app-subtitle">Organized Data</p>
+        </div>
+        
+        <div class="header-center">
+            <input type="text" class="search-input" placeholder="Search something...">
+        </div>
+        
+        <div class="header-right">
+            <button class="icon-btn"><i class="fa-solid fa-bell"></i></button>
+            <button class="icon-btn"><i class="fa-solid fa-gear"></i></button>
+            <div class="user-menu">
+                <div class="user-avatar">LG</div>
+                <div class="user-info">
+                    <div class="user-name">Lydia Goose</div>
+                    <div class="user-role">Staff Frontline</div>
+                </div>
+                <i class="fa-solid fa-chevron-down"></i>
+            </div>
+        </div>
+    </div>
+    
+    <!-- MAIN CONTAINER -->
+    <div class="main-container">
+        <!-- LEFT SIDEBAR - Categories -->
+        <div class="left-sidebar">
+            <div class="sidebar-section">
+                <h3 class="section-title">Categories</h3>
+                <div class="category-buttons">
+                    <button class="category-btn active" data-tab="all">
+                        <i class="fa-solid fa-boxes-stacked"></i> All Items
+                    </button>
+                    <button class="category-btn" data-tab="manageCatalog">
+                        <i class="fa-solid fa-plus-circle"></i> Add Inventory
+                    </button>
+                    <button class="category-btn" data-tab="placeOrder">
+                        <i class="fa-solid fa-shopping-cart"></i> Place Order
+                    </button>
+                    <button class="category-btn" data-tab="analytics">
+                        <i class="fa-solid fa-chart-bar"></i> Analytics
+                    </button>
+                </div>
+            </div>
+            
+            <div class="sidebar-section">
+                <h3 class="section-title">Filters</h3>
+                <div class="filter-group">
+                    <label class="filter-label">
+                        <input type="checkbox" checked> In Stock
+                    </label>
+                    <label class="filter-label">
+                        <input type="checkbox"> Low Stock
+                    </label>
+                    <label class="filter-label">
+                        <input type="checkbox"> Out of Stock
+                    </label>
+                </div>
+            </div>
+            
+            <div class="sidebar-section">
+                <h3 class="section-title">Sort By</h3>
+                <select class="sort-select">
+                    <option>Most Recent</option>
+                    <option>Lowest Stock</option>
+                    <option>Highest Value</option>
+                    <option>A - Z</option>
+                </select>
+            </div>
+        </div>
+        
+        <!-- CENTER CONTENT - Cards Grid -->
+        <div class="center-content">
+            <!-- All Items View -->
+            <div class="content-section active" id="section-all">
+                <div class="section-header">
+                    <h2>All Catalog Items</h2>
+                    <div class="view-controls">
+                        <button class="view-btn active" data-view="grid">
+                            <i class="fa-solid fa-grip"></i>
+                        </button>
+                        <button class="view-btn" data-view="list">
+                            <i class="fa-solid fa-list"></i>
+                        </button>
+                    </div>
+                </div>
+                
+                <div class="cards-grid" id="cardsGrid">
+                    <!-- Cards will be populated by JavaScript -->
+                </div>
+            </div>
+            
+            <!-- Add Inventory Tab -->
+            <div class="content-section" id="section-manageCatalog" style="display:none;">
+                <div class="section-header">
+                    <h2>Add New Inventory</h2>
+                </div>
+                
+                <div class="form-container">
+                    <form id="catalogEntryForm" class="modern-form">
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="CatalogName">Catalog Name</label>
+                                <select id="CatalogName" class="form-control modern-input" required></select>
+                            </div>
+                            <div class="form-group">
+                                <label for="ReceiptDate">Receipt Date</label>
+                                <input id="ReceiptDate" class="form-control modern-input" type="date" required>
+                            </div>
+                        </div>
+                        
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="QuantityReceived">Quantity Received</label>
+                                <input id="QuantityReceived" class="form-control modern-input" type="number" min="0" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="DeliveryDate">Delivery Date</label>
+                                <input id="DeliveryDate" class="form-control modern-input" type="date" required>
+                            </div>
+                        </div>
+                        
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="IssueQuantity">Issue Quantity</label>
+                                <input id="IssueQuantity" class="form-control modern-input" type="number" min="0" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="StockQuantity">Stock Quantity</label>
+                                <input id="StockQuantity" class="form-control modern-input" type="number" min="0" readonly>
+                            </div>
+                        </div>
+                        
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="DistributionDestination">Distribution Destination</label>
+                                <input id="DistributionDestination" class="form-control modern-input" type="text" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="Requester">Requester</label>
+                                <input id="Requester" class="form-control modern-input" type="text" required>
+                            </div>
+                        </div>
+                        
+                        <div class="form-row">
+                            <div class="form-group full-width">
+                                <label for="Remarks">Remarks</label>
+                                <input id="Remarks" class="form-control modern-input" type="text">
+                            </div>
+                        </div>
+                        
+                        <button type="button" class="btn-submit" id="Insbtn">
+                            <i class="fa-solid fa-plus"></i> Add Inventory
+                        </button>
+                    </form>
+                    <div class="message" id="message"></div>
+                </div>
+            </div>
+            
+            <!-- Place Order Tab -->
+            <div class="content-section" id="section-placeOrder" style="display:none;">
+                <div class="section-header">
+                    <h2>Place New Order</h2>
+                </div>
+                
+                <div class="form-container">
+                    <form id="orderForm" class="modern-form">
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="OrderCatalogName">Catalog Name</label>
+                                <select id="OrderCatalogName" class="form-control modern-input" required></select>
+                            </div>
+                            <div class="form-group">
+                                <label for="OrderQuantity">Order Quantity</label>
+                                <input id="OrderQuantity" class="form-control modern-input" type="number" min="1" required>
+                            </div>
+                        </div>
+                        
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="OrderRequester">Requester</label>
+                                <input id="OrderRequester" class="form-control modern-input" type="text" required>
+                            </div>
+                        </div>
+                        
+                        <div class="form-row">
+                            <div class="form-group full-width">
+                                <label for="OrderMessage">Order Message</label>
+                                <div class="editor-toolbar">
+                                    <button type="button" class="editor-btn" onclick="formatOrderMsg('bold')" title="Bold"><b>B</b></button>
+                                    <button type="button" class="editor-btn" onclick="formatOrderMsg('italic')" title="Italic"><i>I</i></button>
+                                    <button type="button" class="editor-btn" onclick="formatOrderMsg('underline')" title="Underline"><u>U</u></button>
+                                    <button type="button" class="editor-btn" onclick="formatOrderMsgColor()" title="Color"><span style='color:#ea5455;'>A</span></button>
+                                </div>
+                                <div id="OrderMessage" contenteditable="true" class="editor-content" placeholder="Enter your order message..."></div>
+                            </div>
+                        </div>
+                        
+                        <button type="button" class="btn-submit" id="OrderBtn">
+                            <i class="fa-solid fa-paper-plane"></i> Place Order
+                        </button>
+                    </form>
+                    <div class="message" id="orderMessage"></div>
+                </div>
+            </div>
+            
+            <!-- Analytics Tab -->
+            <div class="content-section" id="section-analytics" style="display:none;">
+                <div class="section-header">
+                    <h2>Analytics & Reports</h2>
+                </div>
+                
+                <div id="analyticsContainer">
+                    <!-- Charts will be populated by JavaScript -->
+                </div>
+            </div>
+        </div>
+        
+        <!-- RIGHT SIDEBAR - Quick Info -->
+        <div class="right-sidebar">
+            <div class="quick-info-card">
+                <h3>Total Inventory</h3>
+                <div class="big-number" id="totalStockValue">0</div>
+                <p class="info-label">units in stock</p>
+            </div>
+            
+            <div class="quick-info-card">
+                <h3>Low Stock Items</h3>
+                <div class="big-number warning" id="lowStockCount">0</div>
+                <p class="info-label">need restocking</p>
+            </div>
+            
+            <div class="quick-info-card">
+                <h3>Recent Orders</h3>
+                <div class="big-number" id="recentOrdersCount">0</div>
+                <p class="info-label">last 7 days</p>
+            </div>
+            
+            <div class="recent-activity">
+                <h3>Recent Activity</h3>
+                <div class="activity-list" id="activityList">
+                    <p class="empty-state">No recent activity</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Core Libraries -->
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    
+    <!-- Main App -->
+    <script type="module" src="js/main.js"></script>
+</body>
+</html>
